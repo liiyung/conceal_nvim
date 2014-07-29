@@ -1,15 +1,29 @@
-# Markdown Vim Mode
+# Markdown Concealed Vim Syntax #
 
-Syntax highlighting, matching rules and mappings for [the original Markdown](http://daringfireball.net/projects/markdown/) and extensions.
+A variation of the [vim-markdown](https://github.com/prurigro/vim-markdown-concealed) syntax highlighting, matching rules and mappings for [the original Markdown](http://daringfireball.net/projects/markdown/) and extensions for viewing Markdown. This version cleans up Markdown syntax for easier reading using the **conceal** feature available in Vim 7.3 or later, and seems to make the most sense in use alongside things like **less.vim** and **[vimpager](https://github.com/rkitover/vimpager)**.
 
-## Installation
+## Concealed Completion ##
+
+Below is a list (so far) of the Markdown syntax tags that currently have a supported conceal operation:
+
+| Description            |    Syntax    |    Action |
+|:-----------------------|:------------:|----------:|
+| Atx-style headers      | #            | -removed- |
+| Bold/Italic Star       | *            | -removed- |
+| Bold/Italic Underscore | _            | -removed- |
+| Link                   | [title](url) | title→url |
+| List Star              | * item       | • item    |
+| List Dash              | - item       | • item    |
+| List Plus              | + item       | • item    |
+
+## Installation ##
 
 If you use [Vundle](https://github.com/gmarik/vundle), add the following line to your `~/.vimrc`:
 
     Plugin 'godlygeek/tabular'
-    Plugin 'plasticboy/vim-markdown'
+    Plugin 'prurigro/vim-markdown-concealed'
 
-The `tabular` plugin come *before* `vim-markdown`.
+The `tabular` plugin come *before* `vim-markdown-concealed`.
 
 Then run inside Vim:
 
@@ -19,21 +33,21 @@ Then run inside Vim:
 If you use [Pathogen](https://github.com/tpope/vim-pathogen), do this:
 
     $ cd ~/.vim/bundle
-    $ git clone https://github.com/plasticboy/vim-markdown.git
+    $ git clone https://github.com/prurigro/vim-markdown-concealed.git
 
 To install without Pathogen using the Debian [vim-addon-manager](http://packages.qa.debian.org/v/vim-addon-manager.html), do this:
 
-    $ git clone https://github.com/plasticboy/vim-markdown.git
-    $ cd vim-markdown
+    $ git clone https://github.com/prurigro/vim-markdown-concealed.git
+    $ cd vim-markdown-concealed
     $ sudo make install
     $ vim-addon-manager install mkd
 
-If you are not using any package manager, download the [tarball](https://github.com/plasticboy/vim-markdown/archive/master.tar.gz) and do this:
+If you are not using any package manager, download the [tarball](https://github.com/prurigro/vim-markdown-concealed/archive/master.tar.gz) and do this:
 
     $ cd ~/.vim
-    $ tar --strip=1 -zxf vim-markdown-master.tar.gz
+    $ tar --strip=1 -zxf vim-markdown-concealed-master.tar.gz
 
-## Options
+## Options ##
 
 **Disable Folding**
 
@@ -59,7 +73,7 @@ Add the following line to your `.vimrc` to disable default key mappings. You can
 let g:vim_markdown_no_default_key_mappings=1
 ```
 
-## Mappings
+## Mappings ##
 
 The following work on normal and visual modes:
 
@@ -70,7 +84,7 @@ The following work on normal and visual modes:
 - `]c`: go to Current header. `<Plug>(Markdown_MoveToCurHeader)`
 - `]u`: go to parent header (Up). `<Plug>(Markdown_MoveToParentHeader)`
 
-## Commands
+## Commands ##
 
 - `:HeaderDecrease`:
 
@@ -107,19 +121,22 @@ The following work on normal and visual modes:
 
 - `:Tocv`: Same as `:Toc` for symmetry with `:Toch` and `Tocv`.
 
-## Credits
+## Credits ##
 
-The main contributors of vim-markdown are:
+The main contributors of vim-markdown-concealed are:
 
-- **Ben Williams** (A.K.A. **plasticboy**). The original developer of vim-markdown. [Homepage](http://plasticboy.com/).
+- **Kevin MacMartin** ([prurigro](https://github.com/prurigro)): Author/Maintainer of this **Concealed** fork of [vim-markdown](https://github.com/plasticboy/vim-markdown).
+
+- **Ben Williams** (A.K.A. [plasticboy](http://plasticboy.com/)): The original developer of [vim-markdown](https://github.com/plasticboy/vim-markdown).
 
 If you feel that your name should be on this list, please make a pull request listing your contributions.
 
-## License
+## License ##
 
 The MIT License (MIT)
 
-Copyright (c) 2012 Benjamin D. Williams
+Copyright (c) 2012-2014 Benjamin D. Williams
+With Portions Copyright (C) 2014 Kevin MacMartin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
