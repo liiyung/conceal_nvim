@@ -6,15 +6,15 @@ A variation of the [vim-markdown](https://github.com/prurigro/vim-markdown-conce
 
 Below is a list (so far) of the Markdown syntax tags that currently have a supported conceal operation:
 
-| Description            |    Syntax    |    Action |
-|:-----------------------|:------------:|----------:|
-| Atx-style headers      | #            | -removed- |
-| Bold/Italic Star       | *            | -removed- |
-| Bold/Italic Underscore | _            | -removed- |
-| Link                   | [title](url) | title→url |
-| List Star              | * item       | • item    |
-| List Dash              | - item       | • item    |
-| List Plus              | + item       | • item    |
+| Description            | Syntax         | Action    |
+|------------------------|----------------|-----------|
+| Atx-style headers      | #              | -removed- |
+| Bold/Italic Star       | *              | -removed- |
+| Bold/Italic Underscore | _              | -removed- |
+| Link                   | \[title\](url) | title→url |
+| List Star              | * item         | • item    |
+| List Dash              | - item         | • item    |
+| List Plus              | + item         | • item    |
 
 ## Installation ##
 
