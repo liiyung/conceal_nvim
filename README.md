@@ -20,10 +20,7 @@ Below is a list (so far) of the Markdown syntax tags that currently have a suppo
 
 If you use [Vundle](https://github.com/gmarik/vundle), add the following line to your `~/.vimrc`:
 
-    Plugin 'godlygeek/tabular'
     Plugin 'prurigro/vim-markdown-concealed'
-
-The `tabular` plugin come *before* `vim-markdown-concealed`.
 
 Then run inside Vim:
 
@@ -103,13 +100,6 @@ The following work on normal and visual modes:
     Convert all Setex style headers in buffer to Atx.
 
     If a range is given, e.g. hit `:` from visual mode, only operate on the range.
-
-- `:TableFormat`: Format the table under the cursor [like this](http://www.cirosantilli.com/markdown-styleguide/#tables).
-
-    Requires [Tabular](https://github.com/godlygeek/tabular).
-
-    The input table *must* already have a separator line as the second line of the table.
-    That line only needs to contain the correct pipes `|`, nothing else is required.
 
 - `:Toc`: create a quickfix vertical window navigable table of contents with the headers.
 
