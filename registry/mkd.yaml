@@ -1,7 +1,6 @@
-addon: mkd
-description: "Markdown syntax highlighting"
+addon: mkdc
+description: "Markdown Conceal syntax highlighting"
 files:
-  - ftdetect/mkd.vim
-  - ftplugin/mkd.vim
-  - syntax/mkd.vim
-  - after/ftplugin/mkd.vim
+  - ftdetect/mkdc.vim
+  - ftplugin/mkdc.vim
+  - syntax/mkdc.vim
