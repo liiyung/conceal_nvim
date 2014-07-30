@@ -34,14 +34,16 @@ syn case ignore
 syn sync linebreaks=1
 
 "additions to HTML groups
-syn region htmlItalic                                  start="\\\@<!\*\S\@="                          end="\S\@<=\\\@<!\*"                   keepend oneline contains=htmlItalicUL
-syn region htmlItalic                                  start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@=" end="\S\@<=_\|_\S\@="                  keepend oneline contains=htmlItalicUL
-syn region htmlBold                                    start="\S\@<=\*\*\|\*\*\S\@="                  end="\S\@<=\*\*\|\*\*\S\@="            keepend oneline contains=htmlBoldStar
-syn region htmlBold                                    start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline contains=htmlBoldStar
-syn region htmlBoldItalic                              start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline contains=htmlBoldStar,htmlItalicUL
-syn region htmlBoldItalic                              start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline contains=htmlBoldStar,htmlItalicUL
-syn match  htmlBoldStar                                "\*\*\**"                                                                             contained conceal
-syn match  htmlItalicUL                                "__*"                                                                                 contained conceal
+syn region htmlItalic                                  start="\\\@<!\*\S\@="                          end="\S\@<=\\\@<!\*"                   keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn region htmlItalic                                  start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@=" end="\S\@<=_\|_\S\@="                  keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn region htmlBold                                    start="\S\@<=\*\*\|\*\*\S\@="                  end="\S\@<=\*\*\|\*\*\S\@="            keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn region htmlBold                                    start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn region htmlBoldItalic                              start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn region htmlBoldItalic                              start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
+syn match  boldItalicStarStart                         "^\*\*\="                                                                             contained conceal
+syn match  boldItalicStarEnd                           "\*\*\=$"                                                                             contained conceal
+syn match  boldItalicUnderlineStart                    "^__\="                                                                               contained conceal
+syn match  boldItalicUnderlineEnd                      "__\=$"                                                                               contained conceal
 syn region mkdFootnotes        matchgroup=mkdDelimiter start="\[^"                                    end="\]"
 syn region mkdID               matchgroup=mkdDelimiter start="\!?\["                                  end="\]"                               contained oneline
 syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained oneline
