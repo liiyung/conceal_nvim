@@ -44,7 +44,7 @@ syn match  htmlBoldStar                                "\*\*\**"                
 syn match  htmlItalicUL                                "__*"                                                                                 contained conceal
 syn region mkdFootnotes        matchgroup=mkdDelimiter start="\[^"                                    end="\]"
 syn region mkdID               matchgroup=mkdDelimiter start="\!?\["                                  end="\]"                               contained oneline
-syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained oneline concealends
+syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained oneline
 syn region mkdLink             matchgroup=mkdDelimiter start="\\\@<!\["                               end="\]\ze\s*[[(]"                     contains=@Spell nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
 syntax match mkdInlineURL                              /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 syn region mkdLinkDef          matchgroup=mkdDelimiter start="^ \{,3}\zs\["                           end="]:"                               oneline nextgroup=mkdLinkDefTarget skipwhite
