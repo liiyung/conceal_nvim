@@ -34,60 +34,62 @@ syn case ignore
 syn sync linebreaks=1
 
 "additions to HTML groups
-syn region htmlItalic       start="\\\@<!\*\S\@="                              end="\S\@<=\\\@<!\*"                  keepend oneline contains=htmlItalicUL
-syn region htmlItalic       start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@="     end="\S\@<=_\|_\S\@="                 keepend oneline contains=htmlItalicUL
-syn region htmlBold         start="\S\@<=\*\*\|\*\*\S\@="                      end="\S\@<=\*\*\|\*\*\S\@="           keepend oneline contains=htmlBoldStar
-syn region htmlBold         start="\S\@<=__\|__\S\@="                          end="\S\@<=__\|__\S\@="               keepend oneline contains=htmlBoldStar
-syn region htmlBoldItalic   start="\S\@<=\*\*\*\|\*\*\*\S\@="                  end="\S\@<=\*\*\*\|\*\*\*\S\@="       keepend oneline contains=htmlBoldStar,htmlItalicUL
-syn region htmlBoldItalic   start="\S\@<=___\|___\S\@="                        end="\S\@<=___\|___\S\@="             keepend oneline contains=htmlBoldStar,htmlItalicUL
-syn match  htmlBoldStar     "\*\*\**"                                                                                contained conceal
-syn match  htmlItalicUL     "__*"                                                                                    contained conceal
-syn region mkdFootnotes     matchgroup=mkdDelimiter start="\[^"                end="\]"
-syn region mkdID            matchgroup=mkdDelimiter start="\!?\["              end="\]"                              contained oneline
-syn region mkdURL           matchgroup=mkdDelimiter start="("                  end=")"                               contained oneline concealends
-syn region mkdLink          matchgroup=mkdDelimiter start="\\\@<!\["           end="\]\ze\s*[[(]"                    contains=@Spell nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
-syntax match mkdInlineURL   /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
-syn region mkdLinkDef       matchgroup=mkdDelimiter start="^ \{,3}\zs\["       end="]:"                              oneline nextgroup=mkdLinkDefTarget skipwhite
-syn region mkdLinkDefTarget                         start="<\?\zs\S" excludenl end="\ze[>[:space:]\n]"               contained nextgroup=mkdLinkTitle,mkdLinkDef skipwhite skipnl oneline
-syn region mkdLinkTitle     matchgroup=mkdDelimiter start=+"+                  end=+"+                               contained
-syn region mkdLinkTitle     matchgroup=mkdDelimiter start=+'+                  end=+'+                               contained
-syn region mkdLinkTitle     matchgroup=mkdDelimiter start=+(+                  end=+)+                               contained
+syn region htmlItalic                                  start="\\\@<!\*\S\@="                          end="\S\@<=\\\@<!\*"                   keepend oneline contains=htmlItalicUL
+syn region htmlItalic                                  start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@=" end="\S\@<=_\|_\S\@="                  keepend oneline contains=htmlItalicUL
+syn region htmlBold                                    start="\S\@<=\*\*\|\*\*\S\@="                  end="\S\@<=\*\*\|\*\*\S\@="            keepend oneline contains=htmlBoldStar
+syn region htmlBold                                    start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline contains=htmlBoldStar
+syn region htmlBoldItalic                              start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline contains=htmlBoldStar,htmlItalicUL
+syn region htmlBoldItalic                              start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline contains=htmlBoldStar,htmlItalicUL
+syn match  htmlBoldStar                                "\*\*\**"                                                                             contained conceal
+syn match  htmlItalicUL                                "__*"                                                                                 contained conceal
+syn region mkdFootnotes        matchgroup=mkdDelimiter start="\[^"                                    end="\]"
+syn region mkdID               matchgroup=mkdDelimiter start="\!?\["                                  end="\]"                               contained oneline
+syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained oneline concealends
+syn region mkdLink             matchgroup=mkdDelimiter start="\\\@<!\["                               end="\]\ze\s*[[(]"                     contains=@Spell nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
+syntax match mkdInlineURL                              /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
+syn region mkdLinkDef          matchgroup=mkdDelimiter start="^ \{,3}\zs\["                           end="]:"                               oneline nextgroup=mkdLinkDefTarget skipwhite
+syn region mkdLinkDefTarget                            start="<\?\zs\S" excludenl                     end="\ze[>[:space:]\n]"                contained nextgroup=mkdLinkTitle,mkdLinkDef skipwhite skipnl oneline
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+"+                                      end=+"+                                contained
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+'+                                      end=+'+                                contained
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                                      end=+)+                                contained
 
 "define Markdown groups
-syn match  mkdLineContinue     ".$"                                                                                  contained
-syn match  mkdLineBreak        /  \+$/
-syn region mkdBlockquote       start=/^\s*>/                                  end=/$/                                contains=mkdLineBreak,mkdLineContinue,@Spell
-syn region mkdCode             start=/\(\([^\\]\|^\)\\\)\@<!`/                end=/\(\([^\\]\|^\)\\\)\@<!`/
-syn region mkdCode             start=/\s*``[^`]*/                             end=/[^`]*``\s*/
-syn region mkdCode             start=/^\s*```\s*[0-9A-Za-z_-]*\s*$/           end=/^\s*```\s*$/
-syn region mkdCode             start="<pre[^>]*>"                             end="</pre>"
-syn region mkdCode             start="<code[^>]*>"                            end="</code>"
-syn region mkdFootnote         start="\[^"                                    end="\]"
-syn match  mkdCode             /^\s*\n\(\(\s\{8,}[^ ]\|\t\t\+[^\t]\).*\n\)\+/
-syn match  mkdIndentCode       /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/                                          contained
-syn match  mkdListItem         "^\s*[-*+]\s\+"                                                                       contains=mkdListTab,mkdListBullet2
-syn match  mkdListItem         "^\s*\d\+\.\s\+"                                                                      contains=mkdListTab
-syn match  mkdListTab          "^\s*\*"                                                                              contained contains=mkdListBullet1
-syn match  mkdListBullet1       "\*"                                                                                 contained conceal cchar=•
-syn match  mkdListBullet2       "[-*+]"                                                                              contained conceal cchar=•
-syn region mkdNonListItemBlock start="\n\(\_^\_$\|\s\{4,}[^ ]\|\t+[^\t]\)\@!" end="^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@=" contains=@mkdNonListItem,@Spell
-syn match  mkdRule             /^\s*\*\s\{0,1}\*\s\{0,1}\*$/
-syn match  mkdRule             /^\s*-\s\{0,1}-\s\{0,1}-$/
-syn match  mkdRule             /^\s*_\s\{0,1}_\s\{0,1}_$/
-syn match  mkdRule             /^\s*-\{3,}$/
-syn match  mkdRule             /^\s*\*\{3,5}$/
+syn match  mkdLineContinue                             ".$"                                                                                  contained
+syn match  mkdLineBreak                                /  \+$/
+syn region mkdBlockquote                               start=/^\s*>/                                  end=/$/                                contains=mkdLineBreak,mkdLineContinue,@Spell
+syn region mkdCode                                     start=/\(\([^\\]\|^\)\\\)\@<!`/                end=/\(\([^\\]\|^\)\\\)\@<!`/
+syn region mkdCode                                     start=/\s*``[^`]*/                             end=/[^`]*``\s*/
+syn region mkdCode                                     start=/^\s*```.*$/                             end=/^\s*```\s*$/                      contains=mkdCodeCfg
+syn match mkdCodeCfg                                   "{[^}]*}"                                                                             contained conceal
+syn region mkdCode                                     start="<pre[^>\\]*>"                           end="</pre>"                           contains=mkdCodeTag
+syn region mkdCode                                     start="<code[^>\\]*>"                          end="</code>"                          contains=mkdCodeTag
+syn match  mkdCodeTag                                  "<[^>\\]*>"                                                                           contained conceal
+syn region mkdFootnote                                 start="\[^"                                    end="\]"
+syn match  mkdCode                                     /^\s*\n\(\(\s\{8,}[^ ]\|\t\t\+[^\t]\).*\n\)\+/
+syn match  mkdIndentCode                               /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/                                          contained
+syn match  mkdListItem                                 "^\s*[-*+]\s\+"                                                                       contains=mkdListTab,mkdListBullet2
+syn match  mkdListItem                                 "^\s*\d\+\.\s\+"                                                                      contains=mkdListTab
+syn match  mkdListTab                                  "^\s*\*"                                                                              contained contains=mkdListBullet1
+syn match  mkdListBullet1                              "\*"                                                                                  contained conceal cchar=•
+syn match  mkdListBullet2                              "[-*+]"                                                                               contained conceal cchar=•
+syn region mkdNonListItemBlock                         start="\n\(\_^\_$\|\s\{4,}[^ ]\|\t+[^\t]\)\@!" end="^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@=" contains=@mkdNonListItem,@Spell
+syn match  mkdRule                                     /^\s*\*\s\{0,1}\*\s\{0,1}\*$/
+syn match  mkdRule                                     /^\s*-\s\{0,1}-\s\{0,1}-$/
+syn match  mkdRule                                     /^\s*_\s\{0,1}_\s\{0,1}_$/
+syn match  mkdRule                                     /^\s*-\{3,}$/
+syn match  mkdRule                                     /^\s*\*\{3,5}$/
 
 " HTML headings
-syn region htmlH1          start="^\s*#"                                      end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn region htmlH2          start="^\s*##"                                     end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn region htmlH3          start="^\s*###"                                    end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn region htmlH4          start="^\s*####"                                   end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn region htmlH5          start="^\s*#####"                                  end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn region htmlH6          start="^\s*######"                                 end="\($\|#\+\)" contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
-syn match  htmlH1          /^.\+\n=\+$/ contains=@Spell
-syn match  htmlH2          /^.\+\n-\+$/ contains=@Spell
-syn match  mkdHeadingBegin "^\s*#*\s*" contained conceal
-syn match  mkdHeadingEnd   "\s*#*\s*$" contained conceal
+syn region htmlH1                                      start="^\s*#"                                  end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn region htmlH2                                      start="^\s*##"                                 end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn region htmlH3                                      start="^\s*###"                                end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn region htmlH4                                      start="^\s*####"                               end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn region htmlH5                                      start="^\s*#####"                              end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn region htmlH6                                      start="^\s*######"                             end="\($\|#\+\)"                       contains=@Spell,mkdHeadingBegin,mkdHeadingEnd
+syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
+syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
+syn match  mkdHeadingBegin                             "^\s*#*\s*"                                                                           contained conceal
+syn match  mkdHeadingEnd                               "\s*#*\s*$"                                                                           contained conceal
 
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdURL,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6
 
