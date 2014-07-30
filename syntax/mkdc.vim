@@ -34,16 +34,14 @@ syn case ignore
 syn sync linebreaks=1
 
 "additions to HTML groups
-syn region htmlItalic                                  start="\\\@<!\*\S\@="                          end="\S\@<=\\\@<!\*"                   keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn region htmlItalic                                  start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@=" end="\S\@<=_\|_\S\@="                  keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn region htmlBold                                    start="\S\@<=\*\*\|\*\*\S\@="                  end="\S\@<=\*\*\|\*\*\S\@="            keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn region htmlBold                                    start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn region htmlBoldItalic                              start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn region htmlBoldItalic                              start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline contains=boldItalicStarStart,boldItalicStarEnd,boldItalicUnderlineStart,boldItalicUnderlineEnd
-syn match  boldItalicStarStart                         "^\*\*\="                                                                             contained conceal
-syn match  boldItalicStarEnd                           "\*\*\=$"                                                                             contained conceal
-syn match  boldItalicUnderlineStart                    "^__\="                                                                               contained conceal
-syn match  boldItalicUnderlineEnd                      "__\=$"                                                                               contained conceal
+syn region htmlItalic                                  start="\\\@<!\*\S\@="                          end="\S\@<=\\\@<!\*"                   keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn region htmlItalic                                  start="\(^\|\s\)\@<=_\|\\\@<!_\([^_]\+\s\)\@=" end="\S\@<=_\|_\S\@="                  keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn region htmlBold                                    start="\S\@<=\*\*\|\*\*\S\@="                  end="\S\@<=\*\*\|\*\*\S\@="            keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn region htmlBold                                    start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn region htmlBoldItalic                              start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn region htmlBoldItalic                              start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline contains=boldItalicStar,boldItalicUnderline
+syn match  boldItalicStar                              "\*\*\="                                                                              contained conceal
+syn match  boldItalicUnderline                         "__\="                                                                                contained conceal
 syn region mkdFootnotes        matchgroup=mkdDelimiter start="\[^"                                    end="\]"
 syn region mkdID               matchgroup=mkdDelimiter start="\!?\["                                  end="\]"                               contained oneline
 syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained oneline
@@ -63,9 +61,8 @@ syn region mkdCode                                     start=/\(\([^\\]\|^\)\\\)
 syn region mkdCode                                     start=/\s*``[^`]*/                             end=/[^`]*``\s*/
 syn region mkdCode                                     start=/^\s*```.*$/                             end=/^\s*```\s*$/                      contains=mkdCodeCfg
 syn match mkdCodeCfg                                   "{[^}]*}"                                                                             contained conceal
-syn region mkdCode                                     start="<pre[^>\\]*>"                           end="</pre>"                           contains=mkdCodeTag
-syn region mkdCode                                     start="<code[^>\\]*>"                          end="</code>"                          contains=mkdCodeTag
-syn match  mkdCodeTag                                  "<[^>\\]*>"                                                                           contained conceal
+syn region mkdCode                                     start="<pre[^>\\]*>"                           end="</pre>"
+syn region mkdCode                                     start="<code[^>\\]*>"                          end="</code>"
 syn region mkdFootnote                                 start="\[^"                                    end="\]"
 syn match  mkdCode                                     /^\s*\n\(\(\s\{8,}[^ ]\|\t\t\+[^\t]\).*\n\)\+/
 syn match  mkdIndentCode                               /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/                                          contained

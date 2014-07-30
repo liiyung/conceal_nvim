@@ -15,8 +15,6 @@ Below is a list (so far) of the Markdown syntax tags that currently have a suppo
 | List Star              | * item                | • item      |
 | List Dash              | - item                | • item      |
 | List Plus              | + item                | • item      |
-| Pre Tag                | \<pre\>text\</pre\>   | text        |
-| Code Tag               | \<code\>text\</code\> | text        |
 | Code Config Block      | \`\`\` {style="..."}  | \`\`\`      |
 
 ## Installation ##
