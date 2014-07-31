@@ -95,7 +95,7 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 HtmlHiLink mkdString        String
 HtmlHiLink mkdCode          String
 HtmlHiLink mkdIndentCode    String
-HtmlHiLink mkdEscape        String
+HtmlHiLink mkdEscape        Comment
 HtmlHiLink mkdEscapeChar    Comment
 HtmlHiLink mkdFootnote      Comment
 HtmlHiLink mkdBlockquote    Comment
