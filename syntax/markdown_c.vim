@@ -55,6 +55,7 @@ syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                
 
 
 "define Markdown groups
+syn region latexMath matchgroup=markdownCodeDelimiter start="\$" end="\$" keepend contained concealends
 syn region mkdMath                 matchgroup=mkdDelimiter                     start="\$"                                     end="\$"                               contained
 syn match  mkdLineContinue                             ".$"                                                                                  contained
 syn match  mkdLineBreak                                /  \+$/
@@ -94,7 +95,6 @@ syn match  mkdEscapeChar                               "\\"                     
 
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdEscape
 
-syn match "\lambda" conceal cchar=≠
 
 
 
