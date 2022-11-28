@@ -45,15 +45,20 @@ syn region mkdID               matchgroup=mkdDelimiter start="\!?\["            
 syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained contains=mkdEscape,mkdURLInnerParen oneline
 syn match  mkdURLInnerParen                            "([^)]*)"                                                                             contained
 syn region mkdLink             matchgroup=mkdDelimiter start="\\\@<!\["                               end="\]\ze\s*[[(]"                     contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
+syn region mkdLink             matchgroup=mkdDelimiter start="\[\["                                   end="\]\]"                             contains=@Spell,mkdEscape
+
+
 syn match  mkdInlineURL                                /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 syn region mkdLinkDef          matchgroup=mkdDelimiter start="^ \{,3}\zs\["                           end="]:"                               oneline nextgroup=mkdLinkDefTarget skipwhite
 syn region mkdLinkDefTarget                            start="<\?\zs\S" excludenl                     end="\ze[>[:space:]\n]"                contained nextgroup=mkdLinkTitle,mkdLinkDef skipwhite skipnl oneline
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+"+                                      end=+"+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+'+                                      end=+'+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                                      end=+)+                                contained
-syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+\[\[+                                      end=+\]\]+                          contained
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+\[\[+                                   end=+\]\]+                             contained
+
 
 "define Markdown groups
+syn region mkdMath                                     start="\$"                                     end="\$"                               contained
 syn match  mkdLineContinue                             ".$"                                                                                  contained
 syn match  mkdLineBreak                                /  \+$/
 syn region mkdBlockquote                               start=/^\s*>/                                  end=/$/                                contains=mkdLineBreak,mkdLineContinue,@Spell
