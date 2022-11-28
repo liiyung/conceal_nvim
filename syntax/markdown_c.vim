@@ -73,7 +73,7 @@ syn match  mkdListItem                                 "^\s*\d\+\.\s\+"         
 syn match  mkdListTab                                  "^\s*\*"                                                                              contained contains=mkdListBullet1
 syn match  mkdListBullet1                              "\*"                                                                                  contained "conceal cchar=•
 syn match  mkdListBullet2                              "[-*+]"                                                                               contained "conceal cchar=•
-syn match  mkdChecklist                                "[-*+]\s\[\s\]\s"                                                                     contained conceal cchar=○
+syn match  mkdChecklist                                "-\s\[\s\]\s"                                                                     contained conceal cchar=○
 syn region mkdNonListItemBlock                         start="\n\(\_^\_$\|\s\{4,}[^ ]\|\t+[^\t]\)\@!" end="^\(\s*\([-*+]\|\d\+\.\)\s\+\)\@=" contains=@mkdNonListItem,@Spell
 syn match  mkdRule                                     /^\s*\*\s\{0,1}\*\s\{0,1}\*$/
 syn match  mkdRule                                     /^\s*-\s\{0,1}-\s\{0,1}-$/
