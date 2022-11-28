@@ -46,15 +46,12 @@ syn region mkdURL              matchgroup=mkdDelimiter start="("                
 syn match  mkdURLInnerParen                            "([^)]*)"                                                                             contained
 syn region mkdLink             matchgroup=mkdDelimiter start="\\\@<!\["                               end="\]\ze\s*[[(]"                     contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
 syn region mkdLink             matchgroup=mkdDelimiter start="\[\["                                   end="\]\]"                             contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID skipwhite oneline concealends
-
-
 syn match  mkdInlineURL                                /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
 syn region mkdLinkDef          matchgroup=mkdDelimiter start="^ \{,3}\zs\["                           end="]:"                               oneline nextgroup=mkdLinkDefTarget skipwhite
 syn region mkdLinkDefTarget                            start="<\?\zs\S" excludenl                     end="\ze[>[:space:]\n]"                contained nextgroup=mkdLinkTitle,mkdLinkDef skipwhite skipnl oneline
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+"+                                      end=+"+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+'+                                      end=+'+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                                      end=+)+                                contained
-syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+\[\[+                                   end=+\]\]+                             contained
 
 
 "define Markdown groups
@@ -118,7 +115,7 @@ HtmlHiLink mkdInlineURL     htmlLink
 HtmlHiLink mkdID            Identifier
 HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
-HtmlHiLink mkdLinkTitle     htmlString
+HtmlHiLink mkdLinkTitle     htmlLink
 HtmlHiLink mkdDelimiter     Delimiter
 
 setlocal formatoptions+=r "Automatically insert bullets
