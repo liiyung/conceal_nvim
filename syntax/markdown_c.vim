@@ -96,30 +96,30 @@ syn match  mkdEscapeChar                               "\\"                     
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdEscape
 
 " FUCK YOU YESSSSSSSSSSS
-syn match mkdEscapeChar "\alpha" conceal cchar=α
+syn match mkdEscapeChar "\\alpha" conceal cchar=α
 syn match mkdEscapeChar "\\beta" conceal cchar=β
-syn match mkdEscapeChar "\gamma" conceal cchar=γ
-syn match mkdEscapeChar "\delta" conceal cchar=δ
+syn match mkdEscapeChar "\\gamma" conceal cchar=γ
+syn match mkdEscapeChar "\\delta" conceal cchar=δ
 syn match mkdEscapeChar "\\epsilon" conceal cchar=ε
-syn match mkdEscapeChar "\zeta" conceal cchar=ζ
-syn match mkdEscapeChar "\eta" conceal cchar=η
-syn match mkdEscapeChar "\theta" conceal cchar=θ
-syn match mkdEscapeChar "\iota" conceal cchar=ι
-syn match mkdEscapeChar "\kappa" conceal cchar=κ
+syn match mkdEscapeChar "\\zeta" conceal cchar=ζ
+syn match mkdEscapeChar "\\eta" conceal cchar=η
+syn match mkdEscapeChar "\\theta" conceal cchar=θ
+syn match mkdEscapeChar "\\iota" conceal cchar=ι
+syn match mkdEscapeChar "\\kappa" conceal cchar=κ
 syn match mkdEscapeChar "\\lambda" conceal cchar=λ
 syn match mkdEscapeChar "\\mu" conceal cchar=μ
 syn match mkdEscapeChar "\\nu" conceal cchar=ν
 syn match mkdEscapeChar "\xi" conceal cchar=ξ
 syn match mkdEscapeChar "\\omicron" conceal cchar=ο
-syn match mkdEscapeChar "\pi" conceal cchar=π
-syn match mkdEscapeChar "\rho" conceal cchar=ρ
-syn match mkdEscapeChar "\sigma" conceal cchar=σ
-syn match mkdEscapeChar "\tau" conceal cchar=τ
+syn match mkdEscapeChar "\\pi" conceal cchar=π
+syn match mkdEscapeChar "\\rho" conceal cchar=ρ
+syn match mkdEscapeChar "\\sigma" conceal cchar=σ
+syn match mkdEscapeChar "\\tau" conceal cchar=τ
 syn match mkdEscapeChar "\\upsilon" conceal cchar=υ
-syn match mkdEscapeChar "\phi" conceal cchar=φ
-syn match mkdEscapeChar "\chi" conceal cchar=χ
-syn match mkdEscapeChar "\psi" conceal cchar=ψ
-syn match mkdEscapeChar "\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\phi" conceal cchar=φ
+syn match mkdEscapeChar "\\chi" conceal cchar=χ
+syn match mkdEscapeChar "\\psi" conceal cchar=ψ
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
 
 " syn match mkdEscapeChar "\Gamma" conceal cchar=Γ
 " syn match mkdEscapeChar "\Delta" conceal cchar=Δ
