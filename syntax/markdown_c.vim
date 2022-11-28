@@ -55,7 +55,7 @@ syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                
 
 
 "define Markdown groups
-syn region mkdMath                                     start="\$"                                     end="\$"                               contained
+syn region mkdMath                 matchgroup=mkdDelimiter                     start="\$"                                     end="\$"                               contained
 syn match  mkdLineContinue                             ".$"                                                                                  contained
 syn match  mkdLineBreak                                /  \+$/
 syn region mkdBlockquote                               start=/^\s*>/                                  end=/$/                                contains=mkdLineBreak,mkdLineContinue,@Spell
@@ -115,7 +115,7 @@ HtmlHiLink mkdInlineURL     htmlLink
 HtmlHiLink mkdID            Identifier
 HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
-HtmlHiLink mkdLinkTitle     htmlLink
+HtmlHiLink mkdLinkTitle     htmlString
 HtmlHiLink mkdDelimiter     Delimiter
 
 setlocal formatoptions+=r "Automatically insert bullets
