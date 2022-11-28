@@ -55,7 +55,7 @@ syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                
 
 
 "define Markdown groups
-syn region latexMath matchgroup=markdownCodeDelimiter start="$" end="$" keepend contained concealends
+syn region latexMath matchgroup=markdownCodeDelimiter start="$" end="$"  contained concealends
 syn region mkdMath                 matchgroup=mkdDelimiter                     start="\$"                                     end="\$"                               contained
 syn match  mkdLineContinue                             ".$"                                                                                  contained
 syn match  mkdLineBreak                                /  \+$/
