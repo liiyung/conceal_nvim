@@ -95,7 +95,7 @@ syn match  mkdEscapeChar                               "\\"                     
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdEscape
 
 
-syn match MathSymbols '\lambda' contained conceal cchar=λ
+syn match String '\lambda' contained conceal cchar=λ
 syn match MathSymbols /\V&sup2;/ conceal cchar=²
 
 " Highlighting for Markdown groups
