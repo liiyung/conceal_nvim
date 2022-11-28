@@ -132,13 +132,6 @@ syn match mkdEscapeChar "\Phi" conceal cchar=Φ
 syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
-" s:SuperSub:
-fun! s:SuperSub(leader, pat, cchar)
-  if a:pat =~# '^\\' || (a:leader == '\^' && a:pat =~# s:tex_superscripts) || (a:leader == '_' && a:pat =~# s:tex_subscripts)
-    exe "syn match texMathSymbol '".a:leader.'\%('.a:pat.'\|{\s*'.a:pat.'\s*}\)'."' contained conceal cchar=".a:cchar
-  endif
-endfun
-call s:SuperSub('\^','5','⁵')
 syn match mkdEscapeChar "\^{1}" conceal cchar=¹
 syn match mkdEscapeChar "\^{5}" conceal cchar=⁵
 
