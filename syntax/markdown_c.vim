@@ -135,6 +135,8 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 syn match mkdMath "^{1}" conceal cchar=¹
 syn match mkdMath "^{5}" conceal cchar=⁵
 
+syn match mkdEscapeChar "\_j" conceal cchar=ⱼ
+
 " Highlighting for Markdown groups
 HtmlHiLink mkdString        String
 HtmlHiLink mkdCode          String
