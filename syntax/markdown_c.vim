@@ -191,6 +191,8 @@ syn match mkdEscapeChar "\\leftrightarrow" conceal cchar=↔
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
+syn match mkdEscapeChar "\^1" conceal cchar=¹
+
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
 "
