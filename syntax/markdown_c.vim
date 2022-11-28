@@ -136,9 +136,14 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 syn match mkdEscapeChar "\\left(" conceal cchar=(
 syn match mkdEscapeChar "\\right)" conceal cchar=)
 syn match mkdEscapeChar "\\approx" conceal cchar=≈
+syn match mkdEscapeChar "\\equiv" conceal cchar=≡
+syn match mkdEscapeChar "\sim" conceal cchar=∼ 
 syn match mkdEscapeChar "\\pm" conceal cchar=±
 syn match mkdEscapeChar "\\mp" conceal cchar=∓
 syn match mkdEscapeChar "\\times" conceal cchar=×
+syn match mkdEscapeChar "\\nabla" conceal cchar=∇
+syn match mkdEscapeChar "\\partial" conceal cchar=∂
+
 
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
