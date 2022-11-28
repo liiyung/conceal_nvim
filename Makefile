@@ -6,10 +6,10 @@ all:
 
 install:
 	mkdir -pv ${ADDONS}/ftdetect
-	cp -v ftdetect/mkdc.vim ${ADDONS}/ftdetect/mkdc.vim
+	cp -v ftdetect/conceal.vim ${ADDONS}/ftdetect/conceal.vim
 	mkdir -pv ${ADDONS}/ftplugin
-	cp -v ftplugin/mkdc.vim ${ADDONS}/ftplugin/mkdc.vim
+	cp -v ftplugin/conceal.vim ${ADDONS}/ftplugin/conceal.vim
 	mkdir -pv ${ADDONS}/syntax
-	cp -v syntax/mkdc.vim ${ADDONS}/syntax/mkdc.vim
+	cp -v syntax/conceal.vim ${ADDONS}/syntax/conceal.vim
 	mkdir -pv ${REGISTRY}
-	cp -v registry/mkdc.yaml ${REGISTRY}/mkdc.yaml
+	cp -v registry/conceal.yaml ${REGISTRY}/conceal.yaml
