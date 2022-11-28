@@ -51,7 +51,7 @@ syn region mkdLinkDefTarget                            start="<\?\zs\S" excluden
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+"+                                      end=+"+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+'+                                      end=+'+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                                      end=+)+                                contained
-syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+[[+                                      end=+]]+                              contained
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+\[\[+                                      end=+\]\]+                          contained
 
 "define Markdown groups
 syn match  mkdLineContinue                             ".$"                                                                                  contained
