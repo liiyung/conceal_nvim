@@ -132,7 +132,8 @@ syn match mkdEscapeChar "\Phi" conceal cchar=Φ
 syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
-call s:SuperSub('\^','2','²')
+syn match mkdEscapeChar "^{1}" conceal cchar=¹
+syn match mkdEscapeChar "^{5}" conceal cchar=⁵
 
 " Highlighting for Markdown groups
 HtmlHiLink mkdString        String
