@@ -133,14 +133,31 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
 syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
-syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=𝓑
+syn match mkdEscapeChar "\\mathcal{C}" conceal cchar=𝓒
+syn match mkdEscapeChar "\\mathcal{D}" conceal cchar=𝓓
+syn match mkdEscapeChar "\\mathcal{E}" conceal cchar=𝓔
+syn match mkdEscapeChar "\\mathcal{F}" conceal cchar=𝓕
+syn match mkdEscapeChar "\\mathcal{G}" conceal cchar=𝓖
+syn match mkdEscapeChar "\\mathcal{H}" conceal cchar=𝓗
+syn match mkdEscapeChar "\\mathcal{I}" conceal cchar=𝓘
+syn match mkdEscapeChar "\\mathcal{J}" conceal cchar=𝓙
+syn match mkdEscapeChar "\\mathcal{K}" conceal cchar=𝓚
+syn match mkdEscapeChar "\\mathcal{L}" conceal cchar=𝓛
+syn match mkdEscapeChar "\\mathcal{M}" conceal cchar=𝓜
+syn match mkdEscapeChar "\\mathcal{N}" conceal cchar=𝓝
+syn match mkdEscapeChar "\\mathcal{O}" conceal cchar=𝓞
+syn match mkdEscapeChar "\\mathcal{P}" conceal cchar=𝓟
+syn match mkdEscapeChar "\\mathcal{Q}" conceal cchar=𝓠
+syn match mkdEscapeChar "\\mathcal{R}" conceal cchar=𝓡
+syn match mkdEscapeChar "\\mathcal{S}" conceal cchar=𝓢
+syn match mkdEscapeChar "\\mathcal{T}" conceal cchar=𝓣
+syn match mkdEscapeChar "\\mathcal{U}" conceal cchar=𝓤
+syn match mkdEscapeChar "\\mathcal{V}" conceal cchar=𝓥
+syn match mkdEscapeChar "\\mathcal{W}" conceal cchar=𝓦
+syn match mkdEscapeChar "\\mathcal{X}" conceal cchar=𝓧
+syn match mkdEscapeChar "\\mathcal{Y}" conceal cchar=𝓨
+syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
 
 
 
