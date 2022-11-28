@@ -132,13 +132,18 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
+" math symbols
+syn match mkdEscapeChar "\\left(" conceal cchar=(
+syn match mkdEscapeChar "\\right)" conceal cchar=)
 syn match mkdEscapeChar "\\approx" conceal cchar=≈
+syn match mkdEscapeChar "\\pm" conceal cchar=±
+syn match mkdEscapeChar "\\mp" conceal cchar=∓
+syn match mkdEscapeChar "\\times" conceal cchar=×
 
-
-syn match mkdMath "^{1}" conceal cchar=¹
-syn match mkdMath "^{5}" conceal cchar=⁵
-
-syn match mkdEscapeChar "\_j" conceal cchar=ⱼ
+" syn match mkdMath "^{1}" conceal cchar=¹
+" syn match mkdMath "^{5}" conceal cchar=⁵
+"
+" syn match mkdEscapeChar "\_j" conceal cchar=ⱼ
 
 " Highlighting for Markdown groups
 HtmlHiLink mkdString        String
