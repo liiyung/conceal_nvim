@@ -132,6 +132,9 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
+syn match mkdEscapeChar "\\approx" conceal cchar=≈
+
+
 syn match mkdMath "^{1}" conceal cchar=¹
 syn match mkdMath "^{5}" conceal cchar=⁵
 
