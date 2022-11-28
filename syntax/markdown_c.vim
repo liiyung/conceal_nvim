@@ -97,6 +97,7 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 
 syn match MathSymbols '\lambda' contained conceal cchar=λ
 syn match MathSymbols /\V&sup2;/ conceal cchar=²
+syn match String  /"[^"]*"/hs=s+1,he=e-1
 
 " Highlighting for Markdown groups
 HtmlHiLink mkdString        String
