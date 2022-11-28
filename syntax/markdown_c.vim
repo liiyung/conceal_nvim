@@ -133,6 +133,7 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
 " math symbols
+syn match mkdEscapeChar "\\frac" contained
 syn match mkdEscapeChar "\\left(" conceal cchar=(
 syn match mkdEscapeChar "\\right)" conceal cchar=)
 syn match mkdEscapeChar "\\left\[" conceal cchar=[
