@@ -45,7 +45,7 @@ syn region mkdID               matchgroup=mkdDelimiter start="\!?\["            
 syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained contains=mkdEscape,mkdURLInnerParen oneline
 syn match  mkdURLInnerParen                            "([^)]*)"                                                                             contained
 syn region mkdLink             matchgroup=mkdDelimiter start="\\\@<!\["                               end="\]\ze\s*[[(]"                     contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID skipwhite oneline concealends cchar=→
-syn region mkdLink             matchgroup=mkdDelimiter start="\[\["                                   end="\]\]"                             contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID
+syn region mkdLink             matchgroup=mkdDelimiter start="\[\["                                   end="\]\]"                             contains=@Spell,mkdEscape nextgroup=mkdURL,mkdID skipwhite oneline concealends
 
 
 syn match  mkdInlineURL                                /https\?:\/\/\(\w\+\(:\w\+\)\?@\)\?\([A-Za-z][-_0-9A-Za-z]*\.\)\{1,}\(\w\{2,}\.\?\)\{1,}\(:[0-9]\{1,5}\)\?\S*/
