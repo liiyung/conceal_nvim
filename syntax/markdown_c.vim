@@ -51,6 +51,7 @@ syn region mkdLinkDefTarget                            start="<\?\zs\S" excluden
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+"+                                      end=+"+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+'+                                      end=+'+                                contained
 syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                                      end=+)+                                contained
+syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+[[+                                      end=+]]+                              contained
 
 "define Markdown groups
 syn match  mkdLineContinue                             ".$"                                                                                  contained
@@ -118,5 +119,5 @@ HtmlHiLink mkdDelimiter     Delimiter
 setlocal formatoptions+=r "Automatically insert bullets
 setlocal formatoptions-=c "Do not automatically insert bullets when auto-wrapping with text-width
 setlocal comments=b:*,b:+,b:- "Accept various markers as bullets
-let b:current_syntax = "mkdc"
+let b:current_syntax = "markdown_c"
 delcommand HtmlHiLink
