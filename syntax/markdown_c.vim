@@ -132,6 +132,22 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
+syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+syn match mkdEscapeChar "\\omega" conceal cchar=ω
+
+
+
+
+
+
+
 " math symbols
 syn match mkdEscapeChar "\\frac" contained
 syn match mkdEscapeChar "\\left(" conceal cchar=(
