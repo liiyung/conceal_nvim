@@ -135,6 +135,8 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " math symbols
 syn match mkdEscapeChar "\\left(" conceal cchar=(
 syn match mkdEscapeChar "\\right)" conceal cchar=)
+syn match mkdEscapeChar "\\left\[" conceal cchar=[
+syn match mkdEscapeChar "\\right\]" conceal cchar=]
 syn match mkdEscapeChar "\\approx" conceal cchar=≈
 syn match mkdEscapeChar "\\equiv" conceal cchar=≡
 syn match mkdEscapeChar "\sim" conceal cchar=∼ 
