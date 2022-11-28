@@ -97,7 +97,7 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 
 " FUCK YOU YESSSSSSSSSSS
 syn match mkdEscapeChar "\alpha" conceal cchar=α
-syn match mkdEscapeChar "\beta" conceal cchar=β
+syn match mkdEscapeChar "\\beta" conceal cchar=β
 syn match mkdEscapeChar "\gamma" conceal cchar=γ
 syn match mkdEscapeChar "\delta" conceal cchar=δ
 syn match mkdEscapeChar "\epsilon" conceal cchar=ε
