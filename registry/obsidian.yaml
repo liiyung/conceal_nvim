@@ -1,0 +1,6 @@
+addon: obsidian
+description: "'Obsidian' syntax highlighting"
+files:
+  - ftdetect/obsidian.vim
+  - ftplugin/obsidian.vim
+  - syntax/obsidian.vim
