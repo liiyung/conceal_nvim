@@ -93,6 +93,7 @@ syn match  htmlH1                                      /^.\+\n=\+$/             
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
 syn match  mkdEscape                                   "\\[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
 syn match  mkdEscapeChar                               "\\"                                                                                  contained conceal
+syn match  mkdEscapeChar                               "\^"                                                                                  contained conceal
 
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdEscape
 
