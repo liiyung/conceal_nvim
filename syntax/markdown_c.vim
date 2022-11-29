@@ -241,7 +241,6 @@ syn match mkdString "_1" conceal cchar=₆
 syn match mkdString "_1" conceal cchar=₇
 syn match mkdString "_1" conceal cchar=₈
 syn match mkdString "_1" conceal cchar=₉
-syn match mkdString "_\{10\}" conceal cchar=₁₀
 
 
 syn match mkdEscapeChar "\^0" conceal cchar=⁰
@@ -254,7 +253,6 @@ syn match mkdEscapeChar "\^6" conceal cchar=⁶
 syn match mkdEscapeChar "\^7" conceal cchar=⁷
 syn match mkdEscapeChar "\^8" conceal cchar=⁸
 syn match mkdEscapeChar "\^9" conceal cchar=⁹
-syn match mkdEscapeChar "\^\{10\}" conceal cchar=¹⁰
 
 
 
