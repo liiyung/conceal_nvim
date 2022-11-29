@@ -91,10 +91,18 @@ syn region htmlH5              matchgroup=mkdDelimiter start="^\s*#####"        
 syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######"                             end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
+" escape with \
 syn match  mkdEscape                                   "\\[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
 syn match  mkdEscapeChar                               "\\"                                                                                  contained conceal
+" escape with ^ (for superscripts)
 syn match  mkdEscape                                   "\^[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
 syn match  mkdEscapeChar                               "\^"                                                                                  contained conceal
+" escape with _ (for subscripts)
+syn match  mkdEscape                                   "\_[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
+syn match  mkdEscapeChar                               "\_"                                                                                  contained conceal
+
+
+
 
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdEscape
 
@@ -225,7 +233,7 @@ syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
 syn match mkdString "_1" conceal cchar=₁
 syn match mkdEscapeChar "\^2" conceal cchar=²
-syn match mkdEscapeChar "^2" conceal cchar=²
+" syn match mkdEscapeChar "^2" conceal cchar=²
 
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
