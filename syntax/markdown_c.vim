@@ -224,7 +224,7 @@ syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
 syn match mkdString "_1" conceal cchar=₁
 syn match mkdEscapeChar "\^2" conceal cchar=²
-
+syn match mkdEscapeChar "^2" conceal cchar=²
 
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
