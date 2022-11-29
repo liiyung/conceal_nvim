@@ -56,6 +56,7 @@ syn region mkdLinkTitle        matchgroup=mkdDelimiter start=+(+                
 
 "define Markdown groups
 syn region mkdMathZone         matchgroup=mkdDelimiter start="\$"                                     end="\$"                               concealends contains=mkdMath
+syn match mkdMath                                      "\\"                                                                                  contained conceal
 syn match  mkdLineContinue                             ".$"                                                                                  contained
 syn match  mkdLineBreak                                /  \+$/
 syn region mkdBlockquote                               start=/^\s*>/                                  end=/$/                                contains=mkdLineBreak,mkdLineContinue,@Spell
