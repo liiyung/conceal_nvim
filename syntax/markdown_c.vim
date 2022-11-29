@@ -178,6 +178,8 @@ syn match mkdEscapeChar "\sim" conceal cchar=∼
 syn match mkdEscapeChar "\\pm" conceal cchar=±
 syn match mkdEscapeChar "\\mp" conceal cchar=∓
 syn match mkdEscapeChar "\\times" conceal cchar=×
+syn match mkdEscapeChar "\\cdot" conceal cchar=·
+syn match mkdEscapeChar "\\cdots" conceal cchar=···
 syn match mkdEscapeChar "\\nabla" conceal cchar=∇
 syn match mkdEscapeChar "\\partial" conceal cchar=∂
 syn match mkdEscapeChar "\\int" conceal cchar=∫
@@ -192,7 +194,7 @@ syn match mkdEscapeChar "\\leftrightarrow" conceal cchar=↔
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
-syn match mkdString "\^1" conceal cchar=¹
+syn match mkdMath "_1" conceal cchar=¹
 
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
