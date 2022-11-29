@@ -231,8 +231,40 @@ syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
+syn match mkdString "_1" conceal cchar=₀
 syn match mkdString "_1" conceal cchar=₁
+syn match mkdString "_1" conceal cchar=₂
+syn match mkdString "_1" conceal cchar=₃
+syn match mkdString "_1" conceal cchar=₄
+syn match mkdString "_1" conceal cchar=₅
+syn match mkdString "_1" conceal cchar=₆
+syn match mkdString "_1" conceal cchar=₇
+syn match mkdString "_1" conceal cchar=₈
+syn match mkdString "_1" conceal cchar=₉
+syn match mkdString "_1" conceal cchar=₁₀
+
+
+syn match mkdEscapeChar "\^0" conceal cchar=⁰
+syn match mkdEscapeChar "\^1" conceal cchar=¹
 syn match mkdEscapeChar "\^2" conceal cchar=²
+syn match mkdEscapeChar "\^3" conceal cchar=³
+syn match mkdEscapeChar "\^4" conceal cchar=⁴
+syn match mkdEscapeChar "\^5" conceal cchar=⁵
+syn match mkdEscapeChar "\^6" conceal cchar=⁶
+syn match mkdEscapeChar "\^7" conceal cchar=⁷
+syn match mkdEscapeChar "\^8" conceal cchar=⁸
+syn match mkdEscapeChar "\^9" conceal cchar=⁹
+syn match mkdEscapeChar "\^10" conceal cchar=¹⁰
+
+
+
+
+
+
+
+
+
+
 " syn match mkdEscapeChar "^2" conceal cchar=²
 
 " syn match mkdMath "^{1}" conceal cchar=¹
