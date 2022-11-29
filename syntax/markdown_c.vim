@@ -190,6 +190,7 @@ syn match mkdEscapeChar "\\Rightarrow" conceal cchar=⇒
 syn match mkdEscapeChar "\\leftarrow" conceal cchar=←
 syn match mkdEscapeChar "\\Leftarrow" conceal cchar=⇐ 
 syn match mkdEscapeChar "\\leftrightarrow" conceal cchar=↔
+syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
