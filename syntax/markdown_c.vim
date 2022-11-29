@@ -132,16 +132,16 @@ syn match mkdEscapeChar "\\chi" conceal cchar=χ
 syn match mkdEscapeChar "\\psi" conceal cchar=ψ
 syn match mkdEscapeChar "\\omega" conceal cchar=ω
 
-" syn match mkdEscapeChar "\Gamma" conceal cchar=Γ
-" syn match mkdEscapeChar "\Delta" conceal cchar=Δ
-" syn match mkdEscapeChar "\Theta" conceal cchar=Θ
-" syn match mkdEscapeChar "\Lambda" conceal cchar=Λ
-" syn match mkdEscapeChar "\Xi" conceal cchar=Ξ
-" syn match mkdEscapeChar "\Pi" conceal cchar=Π
-" syn match mkdEscapeChar "\Sigma" conceal cchar=Σ
-" syn match mkdEscapeChar "\Phi" conceal cchar=Φ
-" syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
-" syn match mkdEscapeChar "\Omega" conceal cchar=Ω
+syn match mkdEscapeChar "\\Gamma" conceal cchar=Γ
+syn match mkdEscapeChar "\\Delta" conceal cchar=Δ
+syn match mkdEscapeChar "\\Theta" conceal cchar=Θ
+syn match mkdEscapeChar "\\Lambda" conceal cchar=Λ
+syn match mkdEscapeChar "\\Xi" conceal cchar=Ξ
+syn match mkdEscapeChar "\\Pi" conceal cchar=Π
+syn match mkdEscapeChar "\\Sigma" conceal cchar=Σ
+syn match mkdEscapeChar "\\Phi" conceal cchar=Φ
+syn match mkdEscapeChar "\\Psi" conceal cchar=Ψ
+syn match mkdEscapeChar "\\Omega" conceal cchar=Ω
 
 syn match mkdEscapeChar "\\mathbf{A}" conceal cchar=𝐀
 syn match mkdEscapeChar "\\mathbf{B}" conceal cchar=𝐁
