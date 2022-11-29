@@ -143,6 +143,8 @@ syn match mkdEscapeChar "\\Phi" conceal cchar=Φ
 syn match mkdEscapeChar "\\Psi" conceal cchar=Ψ
 syn match mkdEscapeChar "\\Omega" conceal cchar=Ω
 
+syn match mkdEscapeChar "\\hbar" conceal cchar=ħ
+
 syn match mkdEscapeChar "\\mathbf{A}" conceal cchar=𝐀
 syn match mkdEscapeChar "\\mathbf{B}" conceal cchar=𝐁
 syn match mkdEscapeChar "\\mathbf{C}" conceal cchar=𝐂
@@ -198,7 +200,11 @@ syn match mkdEscapeChar "\\mathcal{Y}" conceal cchar=𝓨
 syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
 
 
-
+syn match mkdEscapeChar "\\hat{e}" conceal cchar=ê
+syn match mkdEscapeChar "\\hat{i}" conceal cchar=î
+syn match mkdEscapeChar "\\hat{j}" conceal cchar=ĵ
+syn match mkdEscapeChar "\\hat{y}" conceal cchar=ŷ
+syn match mkdEscapeChar "\\hat{z}" conceal cchar=ẑ
 
 
 
