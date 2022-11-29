@@ -98,8 +98,8 @@ syn match  mkdEscapeChar                               "\\"                     
 syn match  mkdEscape                                   "\^[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
 syn match  mkdEscapeChar                               "\^"                                                                                  contained conceal
 " escape with _ (for subscripts)
-syn match  mkdEscape                                   "\_[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
-syn match  mkdEscapeChar                               "\_"                                                                                  contained conceal
+syn match  mkdEscape                                   "_[`\*_{}\[\]()#\+-\.\!]"                                                            contained contains=mkdEscapeChar
+syn match  mkdEscapeChar                               "_"                                                                                  contained conceal
 
 
 
