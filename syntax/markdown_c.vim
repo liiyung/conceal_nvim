@@ -133,6 +133,33 @@ syn match mkdEscapeChar "\\omega" conceal cchar=ω
 " syn match mkdEscapeChar "\Psi" conceal cchar=Ψ
 " syn match mkdEscapeChar "\Omega" conceal cchar=Ω
 
+syn match mkdEscapeChar "\\mathbf{A}" conceal cchar=𝐀
+syn match mkdEscapeChar "\\mathbf{B}" conceal cchar=𝐁
+syn match mkdEscapeChar "\\mathbf{C}" conceal cchar=𝐂
+syn match mkdEscapeChar "\\mathbf{D}" conceal cchar=𝐃
+syn match mkdEscapeChar "\\mathbf{E}" conceal cchar=𝐄
+syn match mkdEscapeChar "\\mathbf{F}" conceal cchar=𝐅
+syn match mkdEscapeChar "\\mathbf{G}" conceal cchar=𝐆
+syn match mkdEscapeChar "\\mathbf{H}" conceal cchar=𝐇
+syn match mkdEscapeChar "\\mathbf{I}" conceal cchar=𝐈
+syn match mkdEscapeChar "\\mathbf{J}" conceal cchar=𝐉
+syn match mkdEscapeChar "\\mathbf{K}" conceal cchar=𝐊
+syn match mkdEscapeChar "\\mathbf{L}" conceal cchar=𝐋
+syn match mkdEscapeChar "\\mathbf{M}" conceal cchar=𝐌
+syn match mkdEscapeChar "\\mathbf{N}" conceal cchar=𝐍
+syn match mkdEscapeChar "\\mathbf{O}" conceal cchar=𝐎
+syn match mkdEscapeChar "\\mathbf{P}" conceal cchar=𝐏
+syn match mkdEscapeChar "\\mathbf{Q}" conceal cchar=𝐐
+syn match mkdEscapeChar "\\mathbf{R}" conceal cchar=𝐑
+syn match mkdEscapeChar "\\mathbf{S}" conceal cchar=𝐒
+syn match mkdEscapeChar "\\mathbf{T}" conceal cchar=𝐓
+syn match mkdEscapeChar "\\mathbf{U}" conceal cchar=𝐔
+syn match mkdEscapeChar "\\mathbf{V}" conceal cchar=𝐕
+syn match mkdEscapeChar "\\mathbf{W}" conceal cchar=𝐖
+syn match mkdEscapeChar "\\mathbf{X}" conceal cchar=𝐗
+syn match mkdEscapeChar "\\mathbf{Y}" conceal cchar=𝐘
+syn match mkdEscapeChar "\\mathbf{Z}" conceal cchar=𝐙
+
 syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
 syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=𝓑
 syn match mkdEscapeChar "\\mathcal{C}" conceal cchar=𝓒
@@ -194,7 +221,7 @@ syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
-syn match mkdMath "_1" conceal cchar=¹
+syn match mkdMath "_1" conceal cchar=₁
 
 " syn match mkdMath "^{1}" conceal cchar=¹
 " syn match mkdMath "^{5}" conceal cchar=⁵
