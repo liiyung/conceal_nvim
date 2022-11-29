@@ -263,7 +263,6 @@ syn match mkdEscapeChar "_x" conceal cchar=ₓ
 syn match mkdEscapeChar "_+" conceal cchar=₊
 syn match mkdEscapeChar "_-" conceal cchar=₋
 
-syn match mkdEscapeChar "_\{" contained
 
 
 
@@ -312,7 +311,6 @@ syn match mkdEscapeChar "\^\\phi" conceal cchar=ᵠ
 syn match mkdEscapeChar "\^+" conceal cchar=⁺
 syn match mkdEscapeChar "\^-" conceal cchar=⁻
 
-syn match mkdEscapeChar "\^\{" contained
 
 
 
