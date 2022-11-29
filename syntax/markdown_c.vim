@@ -231,39 +231,39 @@ syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
-syn match mkdString "_0" conceal cchar=₀
-syn match mkdString "_1" conceal cchar=₁
-syn match mkdString "_2" conceal cchar=₂
-syn match mkdString "_3" conceal cchar=₃
-syn match mkdString "_4" conceal cchar=₄
-syn match mkdString "_5" conceal cchar=₅
-syn match mkdString "_6" conceal cchar=₆
-syn match mkdString "_7" conceal cchar=₇
-syn match mkdString "_8" conceal cchar=₈
-syn match mkdString "_9" conceal cchar=₉
+syn match mkdEscapeChar "_0" conceal cchar=₀
+syn match mkdEscapeChar "_1" conceal cchar=₁
+syn match mkdEscapeChar "_2" conceal cchar=₂
+syn match mkdEscapeChar "_3" conceal cchar=₃
+syn match mkdEscapeChar "_4" conceal cchar=₄
+syn match mkdEscapeChar "_5" conceal cchar=₅
+syn match mkdEscapeChar "_6" conceal cchar=₆
+syn match mkdEscapeChar "_7" conceal cchar=₇
+syn match mkdEscapeChar "_8" conceal cchar=₈
+syn match mkdEscapeChar "_9" conceal cchar=₉
 
-syn match mkdString "_a" conceal cchar=ₐ
-syn match mkdString "_e" conceal cchar=ₑ
-syn match mkdString "_h" conceal cchar=ₕ
-syn match mkdString "_i" conceal cchar=ᵢ
-syn match mkdString "_j" conceal cchar=ⱼ
-syn match mkdString "_k" conceal cchar=ₖ
-syn match mkdString "_l" conceal cchar=ₗ
-syn match mkdString "_m" conceal cchar=ₘ
-syn match mkdString "_n" conceal cchar=ₙ	
-syn match mkdString "_o" conceal cchar=ₒ
-syn match mkdString "_p" conceal cchar=ₚ
-syn match mkdString "_r" conceal cchar=ᵣ
-syn match mkdString "_s" conceal cchar=ₛ
-syn match mkdString "_t" conceal cchar=ₜ
-syn match mkdString "_u" conceal cchar=ᵤ
-syn match mkdString "_v" conceal cchar=ᵥ
-syn match mkdString "_x" conceal cchar=ₓ
+syn match mkdEscapeChar "_a" conceal cchar=ₐ
+syn match mkdEscapeChar "_e" conceal cchar=ₑ
+syn match mkdEscapeChar "_h" conceal cchar=ₕ
+syn match mkdEscapeChar "_i" conceal cchar=ᵢ
+syn match mkdEscapeChar "_j" conceal cchar=ⱼ
+syn match mkdEscapeChar "_k" conceal cchar=ₖ
+syn match mkdEscapeChar "_l" conceal cchar=ₗ
+syn match mkdEscapeChar "_m" conceal cchar=ₘ
+syn match mkdEscapeChar "_n" conceal cchar=ₙ	
+syn match mkdEscapeChar "_o" conceal cchar=ₒ
+syn match mkdEscapeChar "_p" conceal cchar=ₚ
+syn match mkdEscapeChar "_r" conceal cchar=ᵣ
+syn match mkdEscapeChar "_s" conceal cchar=ₛ
+syn match mkdEscapeChar "_t" conceal cchar=ₜ
+syn match mkdEscapeChar "_u" conceal cchar=ᵤ
+syn match mkdEscapeChar "_v" conceal cchar=ᵥ
+syn match mkdEscapeChar "_x" conceal cchar=ₓ
 
-syn match mkdString "_+" conceal cchar=₊
-syn match mkdString "_-" conceal cchar=₋
+syn match mkdEscapeChar "_+" conceal cchar=₊
+syn match mkdEscapeChar "_-" conceal cchar=₋
 
-
+syn match mkdEscapeChar "_\{" contained
 
 
 
@@ -312,7 +312,7 @@ syn match mkdEscapeChar "\^\\phi" conceal cchar=ᵠ
 syn match mkdEscapeChar "\^+" conceal cchar=⁺
 syn match mkdEscapeChar "\^-" conceal cchar=⁻
 
-
+syn match mkdEscapeChar "\^\{" contained
 
 
 
