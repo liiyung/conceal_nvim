@@ -83,12 +83,12 @@ syn match  mkdRule                                     /^\s*-\{3,}$/
 syn match  mkdRule                                     /^\s*\*\{3,5}$/
 
 " HTML headings
-syn region htmlH1              matchgroup=mkdDelimiter start="^\s*#"                                  end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region htmlH2              matchgroup=mkdDelimiter start="^\s*##"                                 end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region htmlH3              matchgroup=mkdDelimiter start="^\s*###"                                end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region htmlH4              matchgroup=mkdDelimiter start="^\s*####"                               end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region htmlH5              matchgroup=mkdDelimiter start="^\s*#####"                              end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######"                             end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH1              matchgroup=mkdDelimiter start="^\s*#\s"                                  end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH2              matchgroup=mkdDelimiter start="^\s*##\s"                                 end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH3              matchgroup=mkdDelimiter start="^\s*###\s"                                end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH4              matchgroup=mkdDelimiter start="^\s*####\s"                               end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH5              matchgroup=mkdDelimiter start="^\s*#####\s"                              end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
+syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######\s"                             end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
 " escape with \
