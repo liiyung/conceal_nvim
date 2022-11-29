@@ -221,8 +221,8 @@ syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
 syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
 
-syn match String "_1" conceal cchar=₁
-syn match String "\^2" conceal cchar=²
+syn match mkdString "_1" conceal cchar=₁
+syn match mkdString "\^2" conceal cchar=²
 
 
 " syn match mkdMath "^{1}" conceal cchar=¹
