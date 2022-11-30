@@ -92,7 +92,7 @@ syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######\s"     
 " syn region mkdTag              matchgroup=mkdDelimiter start="^\s*#"                             end="\($\|[^\\]#\+\)"                  contains=@Spell,mkdEscapeChar
 
 
-syn match mkdTag              "(\#[a-zA-Z0-9_\\]+\w)"                                                      contains=@Spell,mkdEscapeChar
+syn match mkdTag              "(\B\#[a-zA-Z0-9_\\]+\w)"                                                      contains=@Spell,mkdEscapeChar
 syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
 " escape with \
