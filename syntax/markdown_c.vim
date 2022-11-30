@@ -89,7 +89,7 @@ syn region htmlH3              matchgroup=mkdDelimiter start="^\s*###\s"        
 syn region htmlH4              matchgroup=mkdDelimiter start="^\s*####\s"                               end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn region htmlH5              matchgroup=mkdDelimiter start="^\s*#####\s"                              end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######\s"                             end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
-syn region mkdTag                 matchgroup=mkdDelimiter start="^*#"                                      end="\($\|[^\\]#\+\)"                  contains=@Spell, mkdEscapeChar
+syn region mkdTag              matchgroup=mkdDelimiter start="^*#"                                      end="\s"                               contains=@Spell, mkdEscapeChar
 syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
 " escape with \
@@ -422,7 +422,7 @@ syn match mkdEscapeChar "\^-" conceal cchar=⁻
 HtmlHiLink mkdString        String
 HtmlHiLink mkdCode          String
 HtmlHiLink mkdIndentCode    String
-HtmlHiLink mkdTag              Comment
+HtmlHiLink mkdTag           Comment
 HtmlHiLink mkdEscape        Comment
 HtmlHiLink mkdEscapeChar    Comment
 HtmlHiLink mkdFootnote      Comment
