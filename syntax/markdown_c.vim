@@ -216,6 +216,15 @@ syn match mkdEscapeChar "\\vec{n}" conceal cchar=𝑛⃗
 syn match mkdEscapeChar "\\vec{v}" conceal cchar=v⃗
 syn match mkdEscapeChar "\\vec{x}" conceal cchar=x⃗
 
+syn match mkdEscapeChar "\\dot{r}" conceal cchar=ṙ
+syn match mkdEscapeChar "\\dot{x}" conceal cchar=ẋ
+syn match mkdEscapeChar "\\dot{y}" conceal cchar=ẏ
+
+
+
+
+
+
 " math symbols
 syn match mkdEscapeChar "\\frac" contained
 syn match mkdEscapeChar "\\left(" conceal cchar=(
