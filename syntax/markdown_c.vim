@@ -207,7 +207,14 @@ syn match mkdEscapeChar "\\hat{y}" conceal cchar=ŷ
 syn match mkdEscapeChar "\\hat{z}" conceal cchar=ẑ
 
 
-
+syn match mkdEscapeChar "\\vec{a}" conceal cchar=𝑎⃗
+syn match mkdEscapeChar "\\vec{b}" conceal cchar=𝑏⃗
+syn match mkdEscapeChar "\\vec{c}" conceal cchar=𝑐⃗
+syn match mkdEscapeChar "\\vec{d}" conceal cchar=𝑑⃗
+syn match mkdEscapeChar "\\vec{e}" conceal cchar=e⃗ 
+syn match mkdEscapeChar "\\vec{n}" conceal cchar=𝑛⃗ 
+syn match mkdEscapeChar "\\vec{v}" conceal cchar=v⃗
+syn match mkdEscapeChar "\\vec{x}" conceal cchar=x⃗
 
 " math symbols
 syn match mkdEscapeChar "\\frac" contained
@@ -339,7 +346,6 @@ syn match mkdEscapeChar "\^\\phi" conceal cchar=ᵠ
 
 syn match mkdEscapeChar "\^+" conceal cchar=⁺
 syn match mkdEscapeChar "\^-" conceal cchar=⁻
-
 
 
 
