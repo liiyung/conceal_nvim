@@ -90,8 +90,6 @@ syn region htmlH4              matchgroup=mkdDelimiter start="^\s*####\s"       
 syn region htmlH5              matchgroup=mkdDelimiter start="^\s*#####\s"                              end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn region htmlH6              matchgroup=mkdDelimiter start="^\s*######\s"                             end="\($\|[^\\]#\+\)"                  concealends contains=@Spell,mkdEscapeChar
 syn region mkdTag              matchgroup=mkdDelimiter start="#[a-zA-Z0-9_\/]"                             end="\s"                  contains=@Spell,mkdEscapeChar
-
-
 " syn match mkdTag              "\B\#[a-zA-Z0-9_\/]+\w"                                                      contains=@Spell
 syn match  htmlH1                                      /^.\+\n=\+$/                                                                          contains=@Spell
 syn match  htmlH2                                      /^.\+\n-\+$/                                                                          contains=@Spell
