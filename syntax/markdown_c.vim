@@ -274,7 +274,6 @@ syn match mkdEscapeChar "_{7}" conceal cchar=₇
 syn match mkdEscapeChar "_{8}" conceal cchar=₈
 syn match mkdEscapeChar "_{9}" conceal cchar=₉
 
-
 syn match mkdEscapeChar "_a" conceal cchar=ₐ
 syn match mkdEscapeChar "_e" conceal cchar=ₑ
 syn match mkdEscapeChar "_h" conceal cchar=ₕ
@@ -292,6 +291,25 @@ syn match mkdEscapeChar "_t" conceal cchar=ₜ
 syn match mkdEscapeChar "_u" conceal cchar=ᵤ
 syn match mkdEscapeChar "_v" conceal cchar=ᵥ
 syn match mkdEscapeChar "_x" conceal cchar=ₓ
+syn match mkdEscapeChar "_{a}" conceal cchar=ₐ
+syn match mkdEscapeChar "_{e}" conceal cchar=ₑ
+syn match mkdEscapeChar "_{h}" conceal cchar=ₕ
+syn match mkdEscapeChar "_{i}" conceal cchar=ᵢ
+syn match mkdEscapeChar "_{j}" conceal cchar=ⱼ
+syn match mkdEscapeChar "_{k}" conceal cchar=ₖ
+syn match mkdEscapeChar "_{l}" conceal cchar=ₗ
+syn match mkdEscapeChar "_{m}" conceal cchar=ₘ
+syn match mkdEscapeChar "_{n}" conceal cchar=ₙ	
+syn match mkdEscapeChar "_{o}" conceal cchar=ₒ
+syn match mkdEscapeChar "_{p}" conceal cchar=ₚ
+syn match mkdEscapeChar "_{r}" conceal cchar=ᵣ
+syn match mkdEscapeChar "_{s}" conceal cchar=ₛ
+syn match mkdEscapeChar "_{t}" conceal cchar=ₜ
+syn match mkdEscapeChar "_{u}" conceal cchar=ᵤ
+syn match mkdEscapeChar "_{v}" conceal cchar=ᵥ
+syn match mkdEscapeChar "_{x}" conceal cchar=ₓ
+
+
 
 syn match mkdEscapeChar "_+" conceal cchar=₊
 syn match mkdEscapeChar "_-" conceal cchar=₋
@@ -349,6 +367,36 @@ syn match mkdEscapeChar "\^w" conceal cchar=ʷ
 syn match mkdEscapeChar "\^x" conceal cchar=ˣ
 syn match mkdEscapeChar "\^y" conceal cchar=ʸ
 syn match mkdEscapeChar "\^z" conceal cchar=ᶻ
+syn match mkdEscapeChar "\^{a}" conceal cchar=ᵃ
+syn match mkdEscapeChar "\^{b}" conceal cchar=ᵇ
+syn match mkdEscapeChar "\^{c}" conceal cchar=ᶜ
+syn match mkdEscapeChar "\^{d}" conceal cchar=ᵈ
+syn match mkdEscapeChar "\^{e}" conceal cchar=ᵉ
+syn match mkdEscapeChar "\^{f}" conceal cchar=ᶠ
+syn match mkdEscapeChar "\^{g}" conceal cchar=ᵍ
+syn match mkdEscapeChar "\^{h}" conceal cchar=ʰ
+syn match mkdEscapeChar "\^{i}" conceal cchar=ⁱ
+syn match mkdEscapeChar "\^{j}" conceal cchar=ʲ
+syn match mkdEscapeChar "\^{k}" conceal cchar=ᵏ
+syn match mkdEscapeChar "\^{l}" conceal cchar=ˡ
+syn match mkdEscapeChar "\^{m}" conceal cchar=ᵐ
+syn match mkdEscapeChar "\^{n}" conceal cchar=ⁿ
+syn match mkdEscapeChar "\^{o}" conceal cchar=ᵒ
+syn match mkdEscapeChar "\^{p}" conceal cchar=ᵖ
+syn match mkdEscapeChar "\^{q}" conceal cchar=ᵠ
+syn match mkdEscapeChar "\^{r}" conceal cchar=ʳ
+syn match mkdEscapeChar "\^{s}" conceal cchar=ˢ
+syn match mkdEscapeChar "\^{t}" conceal cchar=ᵗ
+syn match mkdEscapeChar "\^{u}" conceal cchar=ᵘ
+syn match mkdEscapeChar "\^{v}" conceal cchar=ᵛ
+syn match mkdEscapeChar "\^{w}" conceal cchar=ʷ
+syn match mkdEscapeChar "\^{x}" conceal cchar=ˣ
+syn match mkdEscapeChar "\^{y}" conceal cchar=ʸ
+syn match mkdEscapeChar "\^{z}" conceal cchar=ᶻ
+
+
+
+
 
 syn match mkdEscapeChar "\^\\theta" conceal cchar=ᶿ
 syn match mkdEscapeChar "\^\\phi" conceal cchar=ᵠ
