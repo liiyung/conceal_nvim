@@ -293,6 +293,19 @@ syn match mkdEscapeChar "\^6" conceal cchar=⁶
 syn match mkdEscapeChar "\^7" conceal cchar=⁷
 syn match mkdEscapeChar "\^8" conceal cchar=⁸
 syn match mkdEscapeChar "\^9" conceal cchar=⁹
+syn match mkdEscapeChar "\^{0}" conceal cchar=⁰
+syn match mkdEscapeChar "\^{1}" conceal cchar=¹
+syn match mkdEscapeChar "\^{2}" conceal cchar=²
+syn match mkdEscapeChar "\^{3}" conceal cchar=³
+syn match mkdEscapeChar "\^{4}" conceal cchar=⁴
+syn match mkdEscapeChar "\^{5}" conceal cchar=⁵
+syn match mkdEscapeChar "\^{6}" conceal cchar=⁶
+syn match mkdEscapeChar "\^{7}" conceal cchar=⁷
+syn match mkdEscapeChar "\^{8}" conceal cchar=⁸
+syn match mkdEscapeChar "\^{9}" conceal cchar=⁹
+
+
+
 
 syn match mkdEscapeChar "\^a" conceal cchar=ᵃ
 syn match mkdEscapeChar "\^b" conceal cchar=ᵇ
