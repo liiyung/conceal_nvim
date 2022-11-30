@@ -211,8 +211,8 @@ syn match mkdEscapeChar "\\vec{a}" conceal cchar=𝑎⃗
 syn match mkdEscapeChar "\\vec{b}" conceal cchar=𝑏⃗
 syn match mkdEscapeChar "\\vec{c}" conceal cchar=𝑐⃗
 syn match mkdEscapeChar "\\vec{d}" conceal cchar=𝑑⃗
-syn match mkdEscapeChar "\\vec{e}" conceal cchar=e⃗ 
-syn match mkdEscapeChar "\\vec{n}" conceal cchar=𝑛⃗ 
+" syn match mkdEscapeChar "\\vec{e}" conceal cchar=e⃗ 
+" syn match mkdEscapeChar "\\vec{n}" conceal cchar=𝑛⃗ 
 syn match mkdEscapeChar "\\vec{v}" conceal cchar=v⃗
 syn match mkdEscapeChar "\\vec{x}" conceal cchar=x⃗
 
