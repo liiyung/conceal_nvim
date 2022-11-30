@@ -247,6 +247,17 @@ syn match mkdEscapeChar "_6" conceal cchar=₆
 syn match mkdEscapeChar "_7" conceal cchar=₇
 syn match mkdEscapeChar "_8" conceal cchar=₈
 syn match mkdEscapeChar "_9" conceal cchar=₉
+syn match mkdEscapeChar "_\{0\}" conceal cchar=₀
+syn match mkdEscapeChar "_\{1\}" conceal cchar=₁
+syn match mkdEscapeChar "_\{2\}" conceal cchar=₂
+syn match mkdEscapeChar "_\{3\}" conceal cchar=₃
+syn match mkdEscapeChar "_\{4\}" conceal cchar=₄
+syn match mkdEscapeChar "_\{5\}" conceal cchar=₅
+syn match mkdEscapeChar "_\{6\}" conceal cchar=₆
+syn match mkdEscapeChar "_\{7\}" conceal cchar=₇
+syn match mkdEscapeChar "_\{8\}" conceal cchar=₈
+syn match mkdEscapeChar "_\{9\}" conceal cchar=₉
+
 
 syn match mkdEscapeChar "_a" conceal cchar=ₐ
 syn match mkdEscapeChar "_e" conceal cchar=ₑ
