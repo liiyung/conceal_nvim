@@ -5,3 +5,9 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}.{des3,des,bf,bfa,aes,i
 " python concealed filetype file
 au BufRead,BufNewFile *.{py} set filetype=py_c
 
+" fortran concealed filetype file
+au BufRead, BufNewFile *.{f90, t} set filetype=fortran_c 
+
+
+
+

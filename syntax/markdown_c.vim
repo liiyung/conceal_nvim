@@ -247,11 +247,11 @@ syn match mkdEscapeChar "\\prod" conceal cchar=∏
 syn match mkdEscapeChar "\\rightarrow" conceal cchar=→
 syn match mkdEscapeChar "\\^Rightarrow" conceal cchar=⇒
 syn match mkdEscapeChar "\\leftarrow" conceal cchar=←
-syn match mkdEscapeChar "\\Leftarrow" conceal cchar=⇐ 
+syn match mkdEscapeChar "\\^Leftarrow" conceal cchar=⇐ 
 syn match mkdEscapeChar "\\leftrightarrow" conceal cchar=↔
 syn match mkdEscapeChar "\\mapsto" conceal cchar=→
 syn match mkdEscapeChar "\\downarrow" conceal cchar=↓
-syn match mkdEscapeChar "\\Downarrow" conceal cchar=⇓
+syn match mkdEscapeChar "\\^Downarrow" conceal cchar=⇓
 
 syn match mkdEscapeChar "_0" conceal cchar=₀
 syn match mkdEscapeChar "_1" conceal cchar=₁
