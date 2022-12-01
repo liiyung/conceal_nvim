@@ -266,6 +266,7 @@ syn match mkdEscapeChar "\\ll" conceal cchar=≪
 syn match mkdEscapeChar "\\perp" conceal cchar=⟂
 syn match mkdEscapeChar "\\parallel" conceal cchar=∥
 " syn match mkdEscapeChar "\\neq" conceal cchar=
+syn match mkdEscapeChar "\\Box" conceal cchar=☐
 syn match mkdEscapeChar "\\times" conceal cchar=×
 syn match mkdEscapeChar "\\cdot" conceal cchar=·
 syn match mkdEscapeChar "\\cdots" conceal cchar=⋯
