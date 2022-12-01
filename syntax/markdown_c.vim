@@ -445,7 +445,7 @@ HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
 HtmlHiLink mkdDelimiter     Delimiter
-HtmlHiLink htmlTermPink     ctermfg=red guifg=#e07a9d
+HtmlHiLink htmlTermPink     Error
 
 setlocal formatoptions+=r "Automatically insert bullets
 setlocal formatoptions-=c "Do not automatically insert bullets when auto-wrapping with text-width
