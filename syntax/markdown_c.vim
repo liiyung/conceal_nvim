@@ -180,6 +180,8 @@ syn match mkdEscapeChar "\\mathbf{X}" conceal cchar=𝐗
 syn match mkdEscapeChar "\\mathbf{Y}" conceal cchar=𝐘
 syn match mkdEscapeChar "\\mathbf{Z}" conceal cchar=𝐙
 
+syn match mkdEscapeChar "\\mathbf{\\mu}" conceal cchar=μ
+
 syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
 syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=𝓑
 syn match mkdEscapeChar "\\mathcal{C}" conceal cchar=𝓒
