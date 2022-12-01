@@ -212,6 +212,7 @@ syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
 syn match mkdEscapeChar "\\hat{a}" conceal cchar=â
 syn match mkdEscapeChar "\\hat{c}" conceal cchar=ĉ
 syn match mkdEscapeChar "\\hat{e}" conceal cchar=ê
+syn match mkdEscapeChar "\\mathbf{\\hat{e}}" conceal cchar=ê
 syn match mkdEscapeChar "\\hat{g}" conceal cchar=ĝ
 syn match mkdEscapeChar "\\hat{i}" conceal cchar=î
 syn match mkdEscapeChar "\\hat{j}" conceal cchar=ĵ
