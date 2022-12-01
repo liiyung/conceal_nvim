@@ -40,6 +40,7 @@ syn region htmlBold            matchgroup=mkdDelimiter start="\S\@<=\*\*\|\*\*\S
 syn region htmlBold            matchgroup=mkdDelimiter start="\S\@<=__\|__\S\@="                      end="\S\@<=__\|__\S\@="                keepend oneline concealends contains=mkdEscape
 syn region htmlBoldItalic      matchgroup=mkdDelimiter start="\S\@<=\*\*\*\|\*\*\*\S\@="              end="\S\@<=\*\*\*\|\*\*\*\S\@="        keepend oneline concealends contains=mkdEscape
 syn region htmlBoldItalic      matchgroup=mkdDelimiter start="\S\@<=___\|___\S\@="                    end="\S\@<=___\|___\S\@="              keepend oneline concealends contains=mkdEscape
+syn region htmlTermPink        matchgroup=mkdDelimiter start=/\V<span class="color:var(--pink)">/     end=/\V<\/span>/                       oneline concealends
 syn region mkdFootnotes        matchgroup=mkdDelimiter start="\[^"                                    end="\]"
 syn region mkdID               matchgroup=mkdDelimiter start="\!?\["                                  end="\]"                               contained oneline
 syn region mkdURL              matchgroup=mkdDelimiter start="("                                      end=")"                                contained contains=mkdEscape,mkdURLInnerParen oneline
@@ -106,7 +107,7 @@ syn match  mkdEscapeChar                               "_"                      
 
 
 
-syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdTag,mkdEscape
+syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,htmlTermPink,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdTag,mkdEscape
 
 " FUCK YOU YESSSSSSSSSSS
 syn match mkdEscapeChar "\\alpha" conceal cchar=α
@@ -444,6 +445,7 @@ HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
 HtmlHiLink mkdDelimiter     Delimiter
+HtmlHiLink htmlTermPink     ctermfg=red guifg=#e07a9d
 
 setlocal formatoptions+=r "Automatically insert bullets
 setlocal formatoptions-=c "Do not automatically insert bullets when auto-wrapping with text-width
