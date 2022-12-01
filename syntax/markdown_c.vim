@@ -110,6 +110,11 @@ syn match  mkdEscapeChar                               "_"                      
 syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdTag,mkdEscape
 
 " FUCK YOU YESSSSSSSSSSS
+
+syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
+syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
+
+
 syn match mkdEscapeChar "\\alpha" conceal cchar=α
 syn match mkdEscapeChar "\\beta" conceal cchar=β
 syn match mkdEscapeChar "\\gamma" conceal cchar=γ
@@ -239,6 +244,9 @@ syn match mkdEscapeChar "\\equiv" conceal cchar=≡
 syn match mkdEscapeChar "\sim" conceal cchar=∼ 
 syn match mkdEscapeChar "\\pm" conceal cchar=±
 syn match mkdEscapeChar "\\mp" conceal cchar=∓
+syn match mkdEscapeChar "\\geq" conceal cchar=≥
+syn match mkdEscapeChar "\\leq" conceal cchar=≤
+" syn match mkdEscapeChar "\\neq" conceal cchar=
 syn match mkdEscapeChar "\\times" conceal cchar=×
 syn match mkdEscapeChar "\\cdot" conceal cchar=·
 syn match mkdEscapeChar "\\nabla" conceal cchar=∇
@@ -249,8 +257,10 @@ syn match mkdEscapeChar "\\oint" conceal cchar=∮
 syn match mkdEscapeChar "\\sum" conceal cchar=∑
 syn match mkdEscapeChar "\\prod" conceal cchar=∏
 syn match mkdEscapeChar "\\rightarrow" conceal cchar=→
+syn match mkdEscapeChar "\\longrightarrow" conceal cchar=⭢
 syn match mkdEscapeChar "\\^Rightarrow" conceal cchar=⇒
 syn match mkdEscapeChar "\\leftarrow" conceal cchar=←
+syn match mkdEscapeChar "\\longleftarrow" conceal cchar=⭠
 syn match mkdEscapeChar "\\^Leftarrow" conceal cchar=⇐ 
 syn match mkdEscapeChar "\\leftrightarrow" conceal cchar=↔
 syn match mkdEscapeChar "\\mapsto" conceal cchar=→
