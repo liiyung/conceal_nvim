@@ -209,10 +209,14 @@ syn match mkdEscapeChar "\\mathcal{X}" conceal cchar=𝓧
 syn match mkdEscapeChar "\\mathcal{Y}" conceal cchar=𝓨
 syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
 
-
+syn match mkdEscapeChar "\\hat{a}" conceal cchar=â
+syn match mkdEscapeChar "\\hat{c}" conceal cchar=ĉ
 syn match mkdEscapeChar "\\hat{e}" conceal cchar=ê
+syn match mkdEscapeChar "\\hat{g}" conceal cchar=ĝ
 syn match mkdEscapeChar "\\hat{i}" conceal cchar=î
 syn match mkdEscapeChar "\\hat{j}" conceal cchar=ĵ
+syn match mkdEscapeChar "\\hat{s}" conceal cchar=ŝ
+syn match mkdEscapeChar "\\hat{u}" conceal cchar=û
 syn match mkdEscapeChar "\\hat{y}" conceal cchar=ŷ
 syn match mkdEscapeChar "\\hat{z}" conceal cchar=ẑ
 
@@ -226,12 +230,18 @@ syn match mkdEscapeChar "\\vec{n}" conceal cchar=𝑛⃗
 syn match mkdEscapeChar "\\vec{v}" conceal cchar=v⃗
 syn match mkdEscapeChar "\\vec{x}" conceal cchar=x⃗
 
+syn match mkdEscapeChar "\\dot{c}" conceal cchar=ċ
+syn match mkdEscapeChar "\\dot{e}" conceal cchar=ė
+syn match mkdEscapeChar "\\dot{f}" conceal cchar=ḟ
+syn match mkdEscapeChar "\\dot{g}" conceal cchar=ġ
 syn match mkdEscapeChar "\\dot{r}" conceal cchar=ṙ
 syn match mkdEscapeChar "\\dot{x}" conceal cchar=ẋ
 syn match mkdEscapeChar "\\dot{y}" conceal cchar=ẏ
 
-
-
+syn match mkdEscapeChar "\\ddot{a}" conceal cchar=ä
+syn match mkdEscapeChar "\\ddot{u}" conceal cchar=ü
+syn match mkdEscapeChar "\\ddot{w}" conceal cchar=ẅ
+syn match mkdEscapeChar "\\ddot{x}" conceal cchar=ẍ
 
 
 
@@ -241,6 +251,8 @@ syn match mkdEscapeChar "\\left(" conceal cchar=(
 syn match mkdEscapeChar "\\right)" conceal cchar=)
 syn match mkdEscapeChar "\\left\[" conceal cchar=[
 syn match mkdEscapeChar "\\right\]" conceal cchar=]
+syn match mkdEscapeChar "\\left \\langle" conceal cchar=〈
+syn match mkdEscapeChar "\\right \\rangle" conceal cchar=〉
 syn match mkdEscapeChar "\\approx" conceal cchar=≈
 syn match mkdEscapeChar "\\equiv" conceal cchar=≡
 syn match mkdEscapeChar "\sim" conceal cchar=∼ 
@@ -248,6 +260,10 @@ syn match mkdEscapeChar "\\pm" conceal cchar=±
 syn match mkdEscapeChar "\\mp" conceal cchar=∓
 syn match mkdEscapeChar "\\geq" conceal cchar=≥
 syn match mkdEscapeChar "\\leq" conceal cchar=≤
+syn match mkdEscapeChar "\\gg" conceal cchar=≫
+syn match mkdEscapeChar "\\ll" conceal cchar=≪
+syn match mkdEscapeChar "\\perp" conceal cchar=⟂
+syn match mkdEscapeChar "\\parallel" conceal cchar=∥
 " syn match mkdEscapeChar "\\neq" conceal cchar=
 syn match mkdEscapeChar "\\times" conceal cchar=×
 syn match mkdEscapeChar "\\cdot" conceal cchar=·
