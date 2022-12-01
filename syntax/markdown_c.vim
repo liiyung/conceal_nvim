@@ -183,14 +183,14 @@ syn match mkdEscapeChar "\\mathbf{Z}" conceal cchar=𝐙
 syn match mkdEscapeChar "\\mathbf{\\mu}" conceal cchar=μ
 
 syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
-syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=𝓑
+syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=ℬ
 syn match mkdEscapeChar "\\mathcal{C}" conceal cchar=𝓒
 syn match mkdEscapeChar "\\mathcal{D}" conceal cchar=𝓓
 syn match mkdEscapeChar "\\mathcal{E}" conceal cchar=𝓔
 syn match mkdEscapeChar "\\mathcal{F}" conceal cchar=𝓕
 syn match mkdEscapeChar "\\mathcal{G}" conceal cchar=𝓖
 syn match mkdEscapeChar "\\mathcal{H}" conceal cchar=𝓗
-syn match mkdEscapeChar "\\mathcal{I}" conceal cchar=𝓘
+syn match mkdEscapeChar "\\mathcal{I}" conceal cchar=ℐ
 syn match mkdEscapeChar "\\mathcal{J}" conceal cchar=𝓙
 syn match mkdEscapeChar "\\mathcal{K}" conceal cchar=𝓚
 syn match mkdEscapeChar "\\mathcal{L}" conceal cchar=ℒ
