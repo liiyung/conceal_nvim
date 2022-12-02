@@ -113,6 +113,8 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 
 syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
 syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
+syn match mkdEscapeChar "\\frac{" conceal cchar=(
+syn match mkdEscapeChar "}{" conceal cchar=/
 
 
 syn match mkdEscapeChar "\\alpha" conceal cchar=α
@@ -182,7 +184,7 @@ syn match mkdEscapeChar "\\mathbf{Z}" conceal cchar=𝐙
 
 syn match mkdEscapeChar "\\mathbf{\\mu}" conceal cchar=μ
 
-syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝓐
+syn match mkdEscapeChar "\\mathcal{A}" conceal cchar=𝒜 
 syn match mkdEscapeChar "\\mathcal{B}" conceal cchar=ℬ
 syn match mkdEscapeChar "\\mathcal{C}" conceal cchar=𝓒
 syn match mkdEscapeChar "\\mathcal{D}" conceal cchar=𝓓
@@ -204,7 +206,7 @@ syn match mkdEscapeChar "\\mathcal{S}" conceal cchar=𝓢
 syn match mkdEscapeChar "\\mathcal{T}" conceal cchar=𝓣
 syn match mkdEscapeChar "\\mathcal{U}" conceal cchar=𝓤
 syn match mkdEscapeChar "\\mathcal{V}" conceal cchar=𝓥
-syn match mkdEscapeChar "\\mathcal{W}" conceal cchar=𝓦
+syn match mkdEscapeChar "\\mathcal{W}" conceal cchar=𝒲	
 syn match mkdEscapeChar "\\mathcal{X}" conceal cchar=𝓧
 syn match mkdEscapeChar "\\mathcal{Y}" conceal cchar=𝓨
 syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
