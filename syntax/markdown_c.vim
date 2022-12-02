@@ -113,9 +113,13 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 
 syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
 syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
-syn match mkdEscapeChar "\\frac{" conceal cchar=(
-syn match mkdEscapeChar "}{" conceal cchar=)
-
+syn match mkdEscapeChar "\\frac" contained cchar=(
+syn match mkdEscapeChar "\\left(" conceal cchar=(
+syn match mkdEscapeChar "\\right)" conceal cchar=)
+syn match mkdEscapeChar "\\left\[" conceal cchar=[
+syn match mkdEscapeChar "\\right\]" conceal cchar=]
+syn match mkdEscapeChar "\\left \\langle" conceal cchar=〈
+syn match mkdEscapeChar "\\right \\rangle" conceal cchar=〉
 
 syn match mkdEscapeChar "\\alpha" conceal cchar=α
 syn match mkdEscapeChar "\\beta" conceal cchar=β
@@ -249,13 +253,7 @@ syn match mkdEscapeChar "\\ddot{x}" conceal cchar=ẍ
 
 
 " math symbols
-syn match mkdEscapeChar "\\frac" contained
-syn match mkdEscapeChar "\\left(" conceal cchar=(
-syn match mkdEscapeChar "\\right)" conceal cchar=)
-syn match mkdEscapeChar "\\left\[" conceal cchar=[
-syn match mkdEscapeChar "\\right\]" conceal cchar=]
-syn match mkdEscapeChar "\\left \\langle" conceal cchar=〈
-syn match mkdEscapeChar "\\right \\rangle" conceal cchar=〉
+
 syn match mkdEscapeChar "\\approx" conceal cchar=≈
 syn match mkdEscapeChar "\\equiv" conceal cchar=≡
 syn match mkdEscapeChar "\sim" conceal cchar=∼ 
