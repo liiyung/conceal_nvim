@@ -107,13 +107,17 @@ syn match  mkdEscapeChar                               "_"                      
 
 
 
-syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdTag,mkdEscape
+syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootnotes,mkdID,mkdLink,mkdLinkDef,mkdLineBreak,mkdBlockquote,mkdCode,mkdIndentCode,mkdListItem,mkdRule,htmlH1,htmlH2,htmlH3,htmlH4,htmlH5,htmlH6,mkdTag,mkdEscape,fracpartsnume,fracpartsdivide
 
 " FUCK YOU YESSSSSSSSSSS
 
 syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
 syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
 syn match mkdEscapeChar "\\frac{" conceal cchar=(
+syn match fracpartsnume "}" conceal cchar=)
+syn match fracpartsdivide "{" conceal cchar=/
+syn match fracmiddle "}{" contains=fracpartsnume,fracpartsdivide
+
 syn match mkdEscapeChar "\\left(" conceal cchar=(
 syn match mkdEscapeChar "\\right)" conceal cchar=)
 syn match mkdEscapeChar "\\left\[" conceal cchar=[
