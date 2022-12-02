@@ -220,6 +220,15 @@ syn match mkdEscapeChar "\\mathcal{X}" conceal cchar=𝓧
 syn match mkdEscapeChar "\\mathcal{Y}" conceal cchar=𝓨
 syn match mkdEscapeChar "\\mathcal{Z}" conceal cchar=𝓩
 
+syn match mkdEscapeChar "\\mathfrak{A}" conceal cchar=𝔄
+syn match mkdEscapeChar "\\mathfrak{B}" conceal cchar=𝔅
+syn match mkdEscapeChar "\\mathfrak{C}" conceal cchar=𝕮
+syn match mkdEscapeChar "\\mathfrak{D}" conceal cchar=𝔇
+syn match mkdEscapeChar "\\mathfrak{H}" conceal cchar=ℌ
+syn match mkdEscapeChar "\\mathfrak{M}" conceal cchar=𝔐
+syn match mkdEscapeChar "\\mathfrak{R}" conceal cchar=ℜ
+syn match mkdEscapeChar "\\mathfrak{U}" conceal cchar=𝔘
+
 syn match mkdEscapeChar "\\hat{a}" conceal cchar=â
 syn match mkdEscapeChar "\\hat{c}" conceal cchar=ĉ
 syn match mkdEscapeChar "\\hat{e}" conceal cchar=ê
