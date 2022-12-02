@@ -114,7 +114,7 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
 syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
 syn match mkdEscapeChar "\\frac{" conceal cchar=(
-syn match mkdEscapeChar "}{" conceal cchar=/
+syn match mkdEscapeChar "}{" conceal cchar=)
 
 
 syn match mkdEscapeChar "\\alpha" conceal cchar=α
