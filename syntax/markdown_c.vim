@@ -111,6 +111,7 @@ syn cluster mkdNonListItem contains=htmlItalic,htmlBold,htmlBoldItalic,mkdFootno
 
 " FUCK YOU YESSSSSSSSSSS
 
+
 syn match mkdEscapeChar "\\begin{align}" conceal cchar=❯
 syn match mkdEscapeChar "\\end{align}" conceal cchar=❮
 syn match mkdEscapeChar "\\frac{" conceal cchar=(
