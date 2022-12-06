@@ -10,7 +10,6 @@
   "pointer"
 ] @type
 
-"^LIM" @comment
 
 [
   "allocatable"
@@ -151,6 +150,8 @@
   ","
   "%"
  ] @punctuation.delimiter
+
+
 
 
 (parameters
