@@ -153,7 +153,7 @@
  ;; tads expansion
  [
   "^\w+"
- ]
+ ] @keyword
 
 
 (parameters
