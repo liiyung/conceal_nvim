@@ -1,6 +1,6 @@
 addon: markdown_c
 description: "Markdown Conceal syntax highlighting"
 files:
-  - ftdetect/markdown_c.vim
+  - ftdetect/conceal.vim
   - ftplugin/markdown_c.vim
   - syntax/markdown_c.vim
