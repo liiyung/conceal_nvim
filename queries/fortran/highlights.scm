@@ -118,6 +118,7 @@
   ">="
   "=="
   "/="
+  "=>"
 ] @operator
 
 [
@@ -148,6 +149,12 @@
   ","
   "%"
  ] @punctuation.delimiter
+
+ ;; tads expansion
+ [
+  "^\w+"
+ ]
+
 
 (parameters
   (identifier) @parameter)
