@@ -152,7 +152,7 @@
 
  ;; tads expansion
  [
-  "^D"
+  "\^D"
  ] @keyword
 
 
