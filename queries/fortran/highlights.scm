@@ -2,7 +2,6 @@
 (string_literal) @string
 (number_literal) @number
 (integer) @number
-(float) @float
 (boolean_literal) @boolean
 (comment) @comment
 
