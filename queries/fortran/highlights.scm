@@ -1,7 +1,6 @@
 (identifier) @variable
 (string_literal) @string
 (number_literal) @number
-(integer) @number
 (boolean_literal) @boolean
 (comment) @comment
 
