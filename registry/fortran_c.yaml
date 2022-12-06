@@ -1,6 +1,6 @@
 addon: fortran_c
 description: "Fortran Conceal syntax highlighting"
 files:
-  - ftdetect/conceal.vim
+  - ftdetect/fortran_c.vim
   - ftplugin/fortran_c.vim
   - syntax/fortran_c.vim
