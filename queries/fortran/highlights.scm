@@ -10,7 +10,6 @@
   "pointer"
 ] @type
 
-  "^D" @type
 
 
 [
