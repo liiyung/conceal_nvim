@@ -161,7 +161,7 @@
   (name) @function)
 
 (subroutine_statement
-  (name) @function)
+  (name) @name)
 
 (end_program_statement
   (name) @namespace)
@@ -173,7 +173,7 @@
   (name) @function)
 
 (end_subroutine_statement
-  (name) @function)
+  (name) @name)
 
 (subroutine_call
   (name) @function)
