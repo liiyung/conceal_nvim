@@ -152,7 +152,7 @@
 
  [
   "\^D"
- ] @keyword
+ ] @keyword.operator
 
 
 (parameters
