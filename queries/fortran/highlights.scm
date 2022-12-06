@@ -150,10 +150,7 @@
   "%"
  ] @punctuation.delimiter
 
-[
-  "^D"
-  "^ND"
-] @name
+"^D" @keyword
 
 (parameters
   (identifier) @parameter)
