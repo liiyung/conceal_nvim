@@ -150,9 +150,6 @@
   "%"
  ] @punctuation.delimiter
 
- [
-  "\^D"
- ] @keyword.operator
 
 
 (parameters
