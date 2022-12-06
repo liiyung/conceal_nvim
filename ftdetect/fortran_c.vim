@@ -7,4 +7,4 @@ au BufRead, BufNewFile, BufReadPost *.t set filetype=fortran
 " au BufRead, BufNewFile, BufReadPost *.t set syntax=fortran
 
 " au BufNewFile,BufRead *.t setfiletype fortran
-
+autocmd FileType t setl filetype=fortran
