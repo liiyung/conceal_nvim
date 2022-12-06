@@ -152,8 +152,8 @@
  ] @punctuation.delimiter
 
 
-(ERROR
-  "^LIM" @comment)
+; (ERROR
+  ; "^LIM" @comment)
 
 (parameters
   (identifier) @parameter)
