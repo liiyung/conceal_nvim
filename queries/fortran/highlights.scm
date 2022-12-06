@@ -10,6 +10,9 @@
   "pointer"
 ] @type
 
+  "^D" @type
+
+
 [
   "allocatable"
   "attributes"
@@ -150,7 +153,6 @@
   "%"
  ] @punctuation.delimiter
 
-"\^D" @keyword
 
 (parameters
   (identifier) @parameter)
