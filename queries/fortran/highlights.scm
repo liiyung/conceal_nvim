@@ -4,6 +4,7 @@
 (boolean_literal) @boolean
 (comment) @comment
 
+
 [
   (intrinsic_type)
   "pointer"
