@@ -152,6 +152,7 @@
 
 [
   "^D"
+  "^ND"
 ] @name
 
 (parameters
