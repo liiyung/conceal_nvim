@@ -150,7 +150,6 @@
   "%"
  ] @punctuation.delimiter
 
- ;; tads expansion
  [
   "\^D"
  ] @keyword
