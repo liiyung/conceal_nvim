@@ -10,7 +10,7 @@
   "pointer"
 ] @type
 
-
+"^LIM" @comment
 
 [
   "allocatable"
