@@ -1,45 +1,40 @@
-(identifier) @variable
-(string_literal) @string
-(number_literal) @number
-(boolean_literal) @boolean
-(comment) @comment
+; Preprocs
 
+(preproc_file_line) @preproc
 
-[
-  (intrinsic_type)
-  "pointer"
-] @type
+; Namespaces
 
+(program_statement
+  (name) @namespace)
 
-[
-  "allocatable"
-  "attributes"
-  "device"
-  "dimension"
-  "global"
-  "grid_global"
-  "host"
-  "optional"
-  "private"
-  "public"
-  "value"
-] @type.qualifier
+(end_program_statement
+  (name) @namespace)
 
-[
-  "endtype"
-  "type"
-] @type.definition
+(module_statement
+  (name) @namespace)
+
+(end_module_statement
+  (name) @namespace)
+
+(submodule_statement
+  (name) @namespace)
+
+(end_submodule_statement
+  (name) @namespace)
+
+; Includes
 
 [
-  "in"
-  "inout"
-  "out"
-] @storageclass
-
-[
-  "contains"
   "import"
+  "include"
+  "use"
 ] @include
+
+(import_statement
+  ","
+  ["all" "none"] @keyword)
+
+; Attributes
 
 [
   (none)
@@ -47,52 +42,183 @@
   "intent"
 ] @attribute
 
+(implicit_statement
+  "type" @attribute)
+
+; Keywords
+
 [
+  "attributes"
+  "associate"
+  "block"
+  "class"
+  "classis"
+  "contains"
+  "default"
+  "dimension"
+  "endassociate"
+  "endenum"
+  "endinterface"
+  "endmodule"
+  "endselect"
+  "endsubmodule"
+  "endtype"
+  "enum"
+  "enumerator"
+  "equivalence"
+  "extends"
+  "goto"
+  "interface"
+  "intrinsic"
+  "non_intrinsic"
+  "module"
+  "submodule"
+  "namelist"
+  "parameter"
+  "quiet"
+  "rank"
+  "save"
+  "selectcase"
+  "selectrank"
+  "selecttype"
+  "sequence"
+  "stop"
+  "target"
+  "type"
+  "typeis"
+] @keyword
+
+[
+  (default)
+] @keyword
+
+; Types
+
+[
+  (type_name)
+] @type
+
+[
+  (intrinsic_type)
+] @type.builtin
+
+; Qualifiers
+
+[
+  "abstract"
+  "allocatable"
+  "automatic"
+  "constant"
+  "contiguous"
+  "data"
+  "deferred"
+  "device"
+  "external"
+  "family"
+  "final"
+  "generic"
+  "global"
+  "grid_global"
+  "host"
+  "initial"
+  "local"
+  "local_init"
+  "managed"
+  "nopass"
+  "non_overridable"
+  "optional"
+  "pass"
+  "pinned"
+  "pointer"
+  "private"
+  "property"
+  "protected"
+  "public"
+  "shared"
+  "static"
+  "texture"
+  "value"
+  "volatile"
+  (procedure_qualifier)
+] @type.qualifier
+
+[
+  "common"
+  "in"
+  "inout"
+  "out"
+] @storageclass
+
+; Labels
+
+[
+  (statement_label)
+  (statement_label_reference)
+] @label
+
+[
+  "call"
   "endfunction"
   "endprogram"
+  "endprocedure"
   "endsubroutine"
   "function"
   "procedure"
+  "program"
   "subroutine"
 ] @keyword.function
 
 [
-  "bind"
-  "call"
-  "class"
-  "continue"
-  "cycle"
-  "endenum"
-  "endinterface"
-  "endmodule"
-  "endprogram"
-  "enum"
-  "enumerator"
-  "equivalence"
-  "exit"
-  "format"
-  "goto"
-  "include"
-  "interface"
-  "module"
-  "namelist"
-  "only"
-  "parameter"
-  "print"
-  "program"
-  "read"
-  "stop"
-  "use"
-  "write"
-  (default)
-  (procedure_qualifier)
-] @keyword
+  "result"
+  "return"
+] @keyword.return
 
-"return" @keyword.return
+; Functions
+
+(function_statement
+  (name) @function)
+
+(end_function_statement
+  (name) @function)
+
+(subroutine_statement
+  (name) @function)
+
+(end_subroutine_statement
+  (name) @function)
+
+(module_procedure_statement
+  (name) @function)
+
+(end_module_procedure_statement
+  (name) @function)
+
+(subroutine_call
+  (identifier) @function.call)
+
+[
+  "character"
+  "close"
+  "bind"
+  "format"
+  "open"
+  "print"
+  "read"
+  "write"
+] @function.builtin
+
+; Exceptions
+
+[
+  "error"
+] @exception
+
+; Conditionals
 
 [
   "else"
   "elseif"
+  "elsewhere"
   "endif"
   "endwhere"
   "if"
@@ -100,17 +226,44 @@
   "where"
 ] @conditional
 
-[
-  "do"
-  "enddo"
-  "forall"
-  "while"
-] @repeat
+; Repeats
 
 [
-  "*"
+  "do"
+  "concurrent"
+  "enddo"
+  "endforall"
+  "forall"
+  "while"
+  "continue"
+  "cycle"
+  "exit"
+] @repeat
+
+; Variables
+
+(identifier) @variable
+
+; Parameters
+
+(keyword_argument
+  name: (identifier) @parameter)
+
+(parameters
+  (identifier) @parameter)
+
+; Properties
+
+(derived_type_member_expression
+  (type_member) @property)
+
+; Operators
+
+[
   "+"
   "-"
+  "*"
+  "**"
   "/"
   "="
   "<"
@@ -119,75 +272,58 @@
   ">="
   "=="
   "/="
-  "=>"
+  "//"
+  (assumed_rank)
 ] @operator
 
 [
   "\\.and\\."
   "\\.or\\."
-  "\\.lt\\."
-  "\\.gt\\."
-  "\\.ge\\."
-  "\\.le\\."
-  "\\.eq\\."
   "\\.eqv\\."
   "\\.neqv\\."
+  "\\.lt\\."
+  "\\.gt\\."
+  "\\.le\\."
+  "\\.ge\\."
+  "\\.eq\\."
+  "\\.ne\\."
+  "\\.not\\."
 ] @keyword.operator
 
- ;; Brackets
- [
-  "("
-  ")"
-  "["
-  "]"
-  "<<<"
-  ">>>"
- ] @punctuation.bracket
+; Punctuation
 
- ;; Delimiter
- [
-  "::"
+[ "[" "]" ] @punctuation.bracket
+
+[ "(" ")" ] @punctuation.bracket
+
+[ "<<<" ">>>" ] @punctuation.bracket
+
+(array_literal
+  ["(/" "/)"] @punctuation.bracket)
+
+[
+  ":"
   ","
+  "/"
   "%"
- ] @punctuation.delimiter
+  "::"
+  "=>"
+] @punctuation.delimiter
 
+; Literals
 
-(ERROR
-  (ERROR) @comment)
+(string_literal) @string
 
-(parameters
-  (identifier) @parameter)
+(number_literal) @number
 
-(program_statement
-  (name) @namespace)
+(boolean_literal) @boolean
 
-(module_statement
-  (name) @namespace)
+(null_literal) @constant.builtin
 
-(function_statement
-  (name) @function)
+; Comments
 
-(subroutine_statement
-  (name) @name)
+(comment) @comment @spell
 
-(end_program_statement
-  (name) @namespace)
+; Errors
 
-(end_module_statement
-  (name) @namespace)
-
-(end_function_statement
-  (name) @function)
-
-(end_subroutine_statement
-  (name) @name)
-
-(subroutine_call
-  (name) @function)
-
-(keyword_argument
-  name: (identifier) @keyword)
-
-(derived_type_member_expression
-  (type_member) @property)
-
+(ERROR) @error
